@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: LumaDriver_Driver
+  m_Shader: {fileID: 4800000, guid: 26be09cd3367da94b85b01d138cb2e7a, type: 3}
+  m_ShaderKeywords: _ALAUTOMATIC_ON _ALCOLORCHORD_ON _COLOROVERRIDE_ON _ISENABLED_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - _ALAutomatic: 1
+    - _ALOverride: 0
+    - _ALccZ1: 0.9961
+    - _ALccZ2: 0.9961
+    - _ALccZ3: 0.0039
+    - _ALccZ4: 0.0039
+    - _BandZ1: 0.0546
+    - _BandZ2: 0.039
+    - _BandZ3: 0.0078
+    - _BandZ4: 0.0234
+    - _ColorOverrideZ1: 0
+    - _ColorOverrideZ2: 0
+    - _ColorOverrideZ3: 0
+    - _ColorOverrideZ4: 0
+    - _DebugZone: 0
+    - _IsEnabled: 1
+    - _MinimumBrightness: 0.005
+    - _PulseSpeed: 6.1
+    - _RGBSpeed: 10
+    - _ShiftZ1: 0
+    - _ShiftZ2: 0.025
+    - _ShiftZ3: 0.025
+    - _ShiftZ4: 0.05
+    m_Colors:
+    - _ColourZ1: {r: 1, g: 0, b: 0, a: 1}
+    - _ColourZ2: {r: 0, g: 1, b: 0, a: 1}
+    - _ColourZ3: {r: 0, g: 0, b: 1, a: 1}
+    - _ColourZ4: {r: 1, g: 1, b: 0, a: 1}
