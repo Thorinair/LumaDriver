@@ -13,7 +13,7 @@ support for all 4 zones.
 ## Customization
 1. If you want to play around with the parameters, open the CustomRenderTexture in the location listed below, expand the shader parameters and modify them: `LumaDriver/CustomRenderTexture/LumaDriver_CRT`
 
-![alt text](http://.png "LumaDriver parameters")
+![alt text](https://raw.githubusercontent.com/Thorinair/LumaDriver/master/img/LumaDriverUI.png "LumaDriver parameters")
 
 2. The default animation parameters are closest to emulating the passive Luma Glow in F.Y.N.N.'s Room, Luma Forest and other calm areas.
 3. The Minimum Brightness parameter exists as a bandaid for an issue with Luma Glow where it flashes white when it is in the darkest point. This is why it is not suggested to set it to completely 0.
@@ -27,4 +27,4 @@ support for all 4 zones.
 ## Making Your Own Shader
 Want to make your own Luma Glow compatible shader? Please check the image below for a guide on which pixel locations are responsible for what.
 
-![alt text](http://.png "Luma Glow control texture")
+![alt text](https://raw.githubusercontent.com/Thorinair/LumaDriver/master/img/LumaGlowGuide.png "Luma Glow control texture")
