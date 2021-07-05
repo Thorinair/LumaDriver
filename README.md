@@ -9,6 +9,7 @@ A live demo is available in the [Luminescent Ledge](https://vrchat.com/home/worl
 2. Drag the `LumaDriver` prefab into the scene.
 3. Make sure it is far away from the scene. It should be on Y=1000000 by default.
 4. You are done! Enjoy the beautiful glow once more! Check below for customization options for the driver...
+5. If you have [AudioLink](https://github.com/llealloo/vrc-udon-audio-link) in your world, check 5. under the customization section.
 
 ## Customization
 1. If you want to play around with the parameters, open the CustomRenderTexture in the following location: `LumaDriver/CustomRenderTexture/LumaDriver_CRT`, expand the shader parameters and modify them. Below is a screenshot of all available parameters.
