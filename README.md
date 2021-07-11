@@ -14,7 +14,7 @@ A live demo is available in the [Luminescent Ledge](https://vrchat.com/home/worl
 ## Customization
 1. If you want to play around with the parameters, open the CustomRenderTexture in the following location: `LumaDriver/CustomRenderTexture/LumaDriver_CRT`, expand the shader parameters and modify them. Below is a screenshot of all available parameters.
 
-![LumaDriver Parameters](https://raw.githubusercontent.com/Thorinair/LumaDriver/master/img/LumaDriverUI.png)
+![alt text](https://raw.githubusercontent.com/Thorinair/LumaDriver/master/img/LumaDriverUI.png "LumaDriver Parameters")
 
 2. The default animation parameters are closest to emulating the passive Luma Glow in [F.Y.N.N.'s Room](https://vrchat.com/home/world/wrld_60bcdb81-aca1-4425-b8a0-1c5b721158b5), Luma Forest and other calm areas.
 3. The Minimum Brightness parameter exists as a bandaid for an issue with Luma Glow where it flashes white when it is in the darkest point, and users have a minimum brightness set on their avatars. This is why it is not suggested to set it to completely 0.
@@ -28,4 +28,4 @@ A live demo is available in the [Luminescent Ledge](https://vrchat.com/home/worl
 ## Making Your Own Shader
 Want to make your own Luma Glow compatible shader? Please check the image below for a guide on which pixel locations are responsible for what.
 
-![Luma Glow Control Texture](https://raw.githubusercontent.com/Thorinair/LumaDriver/master/img/LumaGlowGuide.png)
+![alt text](https://raw.githubusercontent.com/Thorinair/LumaDriver/master/img/LumaGlowGuide.png "Luma Glow Control Texture")
