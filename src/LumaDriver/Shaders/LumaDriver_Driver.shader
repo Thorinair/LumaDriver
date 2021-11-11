@@ -312,6 +312,7 @@
                 else {
                     return 0;
                 }
+                return 0;
             }
 
             fixed3 getALStop(fixed3 rgb, float ccStop) {
