@@ -26,8 +26,6 @@ public class LumaDriver_GUI : ShaderGUI
         ShowProperty("_LumaPixel");
         ShowProperty("_ReactiveIdle");
         ShowProperty("_DebugZone");
-
-        ShowProperty("_ALActiveTexture");
     }
     
     void ShowPage_IdleAnimations() {

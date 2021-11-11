@@ -10,11 +10,6 @@
         [MaterialToggle] _LumaPixel("Use Original Luma Glow Pixel", Float) = 1
         [MaterialToggle] _ReactiveIdle("Audio Reactive Pixel On When Idle", Float) = 1
         [MaterialToggle] _DebugZone("Debug Zones", Float) = 0
-        [Space(15)]
-
-        [Header(Internal)]
-        [Space(15)]
-        [NoScaleOffset]_ALActiveTexture ("AudioLink Active CRT", 2D) = "black" {}
 
         [Header(Global Idle Animations)]
         [Space(15)]
@@ -170,8 +165,6 @@
             float _ReactiveIdle;
             float _DebugZone;
 
-            uniform sampler2D _ALActiveTexture;
-
             float _RGBSpeed;
 
             float _ShiftZ1;
@@ -302,7 +295,7 @@
             fixed isALActive() {
                 if (_ALOverride == 1) {
                     if (_ALAutomatic == 1) {
-                        if (tex2D(_ALActiveTexture, float2(0.01563, 0.01563)).r > 0)
+                        if (tex2D(_SelfTexture2D, float2(0.000975, 0.001735)).r > 0)
                             return 1;
                         else
                             return 0;
@@ -364,6 +357,22 @@
 
             float4 frag(v2f_customrendertexture IN) : COLOR {
                 if (_IsEnabled == 1) {
+
+                    // Calculation for whether AudioLink is playing audio
+                    if (IN.localTexcoord.x <= 0.00195 && IN.localTexcoord.y <= 0.00347) {
+                        fixed isOn = 0;
+                        [unroll] for (int i = 4; i < 6; i++) {
+                            [unroll] for (int j = 0; j < 128; j++) {
+                                isOn = max(isOn, tex2D(_AudioTexture, float2(0.0039 + 0.0078125 * j, 0.0078 + 0.0152 * i)).xxx);
+                            }
+                        }
+                        if (isOn > 0) {
+                            return fixed4(1, 0, 0, 1);
+                        }
+                        else {
+                            return fixed4(0, 0, 0, 1);
+                        }
+                    }
 
                     // Original Luma Control Pixel
                     if (_LumaPixel == 1 && IN.localTexcoord.x > 0.625 && IN.localTexcoord.x <= 0.633307 && IN.localTexcoord.y > 0.50423 && IN.localTexcoord.y < 0.51834) {

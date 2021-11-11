@@ -19,7 +19,8 @@ A live demo is available in the [Luminescent Ledge](https://vrchat.com/home/worl
 1. Import the Unity package.
 2. Drag the `LumaDriver` prefab into the scene.
 3. Make sure it is far away from the scene. It should be on Y=1000000 by default.
-4. You are done! Enjoy the beautiful glow once more! Check below for customization options for the driver...
+4. If you wish to use AudioLink, you will have to enable it. Check the AudioLink section below to see how to do that.
+5. You are done! Enjoy the beautiful glow once more! Check below for customization options for the driver...
 
 ## Customization
 If you want to play around with the parameters, open the CustomRenderTexture in the following location: `LumaDriver/CustomRenderTexture/LumaDriver_CRT`, expand the shader parameters to be able to modify them to your liking. The parameters are split up on four separate pages for easier navigation.

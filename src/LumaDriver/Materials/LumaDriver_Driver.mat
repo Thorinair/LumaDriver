@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: LumaDriver_Driver
   m_Shader: {fileID: 4800000, guid: 26be09cd3367da94b85b01d138cb2e7a, type: 3}
-  m_ShaderKeywords: _ALAUTOMATIC_ON _ALCCG1_ON _ALCOLORCHORD_ON _ALOVERRIDE_ON _ALREACTIVEPIXEL_ON
+  m_ShaderKeywords: _ALAUTOMATIC_ON _ALCCG1_ON _ALCOLORCHORD_ON _ALREACTIVEPIXEL_ON
     _COLOROVERRIDE_ON _ISENABLED_ON _LUMAPIXEL_ON _REACTIVEIDLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -19,14 +19,10 @@ Material:
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs:
-    - _ALActiveTexture:
-        m_Texture: {fileID: 8600000, guid: 82d5bd6d04c691b4d91833a96cae8e04, type: 2}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+    m_TexEnvs: []
     m_Floats:
     - _ALAutomatic: 1
-    - _ALOverride: 1
+    - _ALOverride: 0
     - _ALReactivePixel: 1
     - _ALccG1: 1
     - _ALccG1StopA: 0.1992
@@ -123,7 +119,6 @@ Material:
     - _TimeG3Offset: 5
     - _TimeG3Scale: 5
     m_Colors:
-    - _ALActiveTexture: {r: 0, g: 0, b: 0, a: 1}
     - _ColourG1StopA: {r: 1, g: 0, b: 0, a: 1}
     - _ColourG1StopB: {r: 0, g: 1, b: 0, a: 1}
     - _ColourG1StopC: {r: 0, g: 0, b: 1, a: 1}
