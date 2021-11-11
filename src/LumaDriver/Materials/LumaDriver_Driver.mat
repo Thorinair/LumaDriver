@@ -92,7 +92,7 @@ Material:
     - _MidG2Offset: 0.5
     - _MidG3Offset: 0.5
     - _MinimumBrightness: 0.005
-    - _Page: 2
+    - _Page: 0
     - _PulseG1Speed: 6.1
     - _PulseG2Speed: 6.1
     - _PulseG3Speed: 20
