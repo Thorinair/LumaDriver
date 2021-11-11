@@ -26,7 +26,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _ALAutomatic: 1
-    - _ALOverride: 0
+    - _ALOverride: 1
     - _ALReactivePixel: 1
     - _ALccG1: 1
     - _ALccG1StopA: 0.1992
@@ -92,7 +92,7 @@ Material:
     - _MidG2Offset: 0.5
     - _MidG3Offset: 0.5
     - _MinimumBrightness: 0.005
-    - _Page: 0
+    - _Page: 2
     - _PulseG1Speed: 6.1
     - _PulseG2Speed: 6.1
     - _PulseG3Speed: 20

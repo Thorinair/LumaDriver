@@ -302,7 +302,7 @@
             fixed isALActive() {
                 if (_ALOverride == 1) {
                     if (_ALAutomatic == 1) {
-                        if (tex2D(_ALActiveTexture, float2(0.5, 0.5)).r > 0)
+                        if (tex2D(_ALActiveTexture, float2(0.01563, 0.01563)).r > 0)
                             return 1;
                         else
                             return 0;
