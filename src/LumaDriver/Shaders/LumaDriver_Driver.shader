@@ -58,6 +58,7 @@
         [Space(15)]
         [MaterialToggle] _ALOverride("Enabled", Float) = 0
         [MaterialToggle] _ALAutomatic("Automatic Switchover", Float) = 1
+        [MaterialToggle] _ALMaximize("Maximize Colors", Float) = 1
         [Space(15)]
 
         [Header(AudioLink Reactive Pixel)]
@@ -85,25 +86,22 @@
         [Header(AudioLink Gradients)]
         [Space(15)]
         [MaterialToggle] _ALccG1("Enable Gradient 1 Color Control", Float) = 1
-        [Enum(Idle Animations Color,0,ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG1StopA("Gradient 1 Stop A Color Control", Float) = 0.1992
-        [Enum(Idle Animations Color,0,Blend Stops A and C,0.5,ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG1StopB("Gradient 1 Stop B Color Control", Float) = 0.5
-        [Enum(Idle Animations Color,0,ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG1StopC("Gradient 1 Stop C Color Control", Float) = 0.2148
+        [Enum(ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG1StopA("Gradient 1 Stop A Color Control", Float) = 0.1992
+        [Enum(ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG1StopC("Gradient 1 Stop C Color Control", Float) = 0.2148
         [Enum(Bass,0.0078,Low Mids,0.0234,High Mids,0.0390,Treble,0.0546)] _BandG1("Gradient 1 Audio Band", Float) = 0.0078
         [MaterialToggle] _BandG1Reverse("Reverse Gradient 1 Audio", Float) = 0
         _BandG1Length ("Gradient 1 Audio Length", Range(0, 1)) = 0.2
         [Space(10)]
         [MaterialToggle] _ALccG2("Enable Gradient 2 Color Control", Float) = 1
-        [Enum(Idle Animations Color,0,ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG2StopA("Gradient 2 Stop A Color Control", Float) = 0.2070
-        [Enum(Idle Animations Color,0,Blend Stops A and C,0.5,ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG2StopB("Gradient 2 Stop B Color Control", Float) = 0.5
-        [Enum(Idle Animations Color,0,ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG2StopC("Gradient 2 Stop C Color Control", Float) = 0.2227
+        [Enum(ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG2StopA("Gradient 2 Stop A Color Control", Float) = 0.2070
+        [Enum(ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG2StopC("Gradient 2 Stop C Color Control", Float) = 0.2227
         [Enum(Bass,0.0078,Low Mids,0.0234,High Mids,0.0390,Treble,0.0546)] _BandG2("Gradient 2 Audio Band", Float) = 0.0546
         [MaterialToggle] _BandG2Reverse("Reverse Gradient 2 Audio", Float) = 0
         _BandG2Length ("Gradient 2 Audio Length", Range(0, 1)) = 0.2
         [Space(10)]
         [MaterialToggle] _ALccG3("Enable Gradient 3 Color Control", Float) = 0
-        [Enum(Idle Animations Color,0,ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG3StopA("Gradient 3 Stop A Color Control", Float) = 0
-        [Enum(Idle Animations Color,0,Blend Stops A and C,0.5,ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG3StopB("Gradient 3 Stop B Color Control", Float) = 0
-        [Enum(Idle Animations Color,0,ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG3StopC("Gradient 3 Stop C Color Control", Float) = 0
+        [Enum(ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG3StopA("Gradient 3 Stop A Color Control", Float) = 0.1992
+        [Enum(ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG3StopC("Gradient 3 Stop C Color Control", Float) = 0.1992
         [Enum(Bass,0.0078,Low Mids,0.0234,High Mids,0.0390,Treble,0.0546)] _BandG3("Gradient 3 Audio Band", Float) = 0.0390
         [MaterialToggle] _BandG3Reverse("Reverse Gradient 3 Audio", Float) = 0
         _BandG3Length ("Gradient 3 Audio Length", Range(0, 1)) = 1.0
@@ -200,6 +198,7 @@
 
             float _ALOverride;
             float _ALAutomatic;
+            float _ALMaximize;
             float _ALReactivePixel;
             float _ReactiveBandLows;
             float _ReactiveBandHighs;
@@ -215,7 +214,6 @@
 
             float _ALccG1;
             float _ALccG1StopA;
-            float _ALccG1StopB;
             float _ALccG1StopC;
             float _BandG1;
             float _BandG1Reverse;
@@ -223,7 +221,6 @@
 
             float _ALccG2;
             float _ALccG2StopA;
-            float _ALccG2StopB;
             float _ALccG2StopC;
             float _BandG2;
             float _BandG2Reverse;
@@ -231,7 +228,6 @@
 
             float _ALccG3;
             float _ALccG3StopA;
-            float _ALccG3StopB;
             float _ALccG3StopC;
             float _BandG3;
             float _BandG3Reverse;
@@ -267,29 +263,43 @@
                 return c.z * lerp( K.xxx, saturate( p - K.xxx ), c.y );
             }
 
+            fixed3 RGBToHSV(fixed3 c) {
+                float4 K = float4(0.0, -1.0 / 3.0, 2.0 / 3.0, -1.0);
+                float4 P = lerp(float4(c.bg, K.wz), float4(c.gb, K.xy), step(c.b, c.g));
+                float4 Q = lerp(float4(P.xyw, c.r), float4(c.r, P.yzx), step(P.x, c.r));
+                float D = Q.x - min(Q.w, Q.y);
+                float  E = 1e-10;
+                return fixed3(abs(Q.z + (Q.w - Q.y)/(6.0 * D + E)), D / (Q.x + E), Q.x);
+            }
+
             fixed3 maximize(fixed3 c) {
-                fixed maxVal = c.x;
-                int useC = 0;
-                if (c.y > maxVal) {
-                    maxVal = c.y;
-                    useC = 1;
+                if (_ALMaximize == 1) {
+                    fixed maxVal = c.x;
+                    int useC = 0;
+                    if (c.y > maxVal) {
+                        maxVal = c.y;
+                        useC = 1;
+                    }
+                    if (c.z > maxVal) {
+                        maxVal = c.z;
+                        useC = 2;
+                    }
+                    if (c.x == 0 && c.y == 0 && c.z == 0)
+                        useC = 3;
+                    if (useC == 0)
+                        return fixed3(1.0, c.y / c.x, c.z / c.x);
+                    else if (useC == 1)
+                        return fixed3(c.x / c.y, 1.0, c.z / c.y);
+                    else if (useC == 2)
+                        return fixed3(c.x / c.z, c.y / c.z, 1.0);
+                    else if (useC == 3)
+                        return fixed3(1.0, 1.0, 1.0);
+                    else
+                        return fixed3(c.x, c.y, c.z);
                 }
-                if (c.z > maxVal) {
-                    maxVal = c.z;
-                    useC = 2;
+                else {
+                    return c;
                 }
-                if (c.x == 0 && c.y == 0 && c.z == 0)
-                    useC = 3;
-                if (useC == 0)
-                    return fixed3(1.0, c.y / c.x, c.z / c.x);
-                else if (useC == 1)
-                    return fixed3(c.x / c.y, 1.0, c.z / c.y);
-                else if (useC == 2)
-                    return fixed3(c.x / c.z, c.y / c.z, 1.0);
-                else if (useC == 3)
-                    return fixed3(1.0, 1.0, 1.0);
-                else
-                    return fixed3(c.x, c.y, c.z);
             }
 
             fixed isALActive() {
@@ -316,33 +326,65 @@
                 return rgb;
             }
 
-            fixed3 getALStopMid(fixed3 rgb, float ccStop, float ccStopA, float ccStopB) {
-                if (ccStop != 0) {
-                    if (ccStop == 0.5) {
-                        fixed3 ccA = tex2D(_AudioTexture, float2(ccStopA, 0.3516));
-                        //ccA = maximize(ccA);
-                        fixed3 ccB = tex2D(_AudioTexture, float2(ccStopB, 0.3516));
-                        //ccB = maximize(ccB);
-                        rgb = (ccA/2 + ccB/2);
-                    }
-                    else {
-                        rgb = tex2D(_AudioTexture, float2(ccStop, 0.3516));
-                    }
-                    rgb = maximize(rgb);
-                }
-                return rgb;
-            }
-
-            fixed4 getGradientOutput(float x, fixed3 rgb, fixed3 rgbA, fixed3 rgbB, fixed3 rgbC, float ratio, float time, float val, float midStop, float fading, float3 debug) {
+            fixed4 getGradientOutput(float x, fixed3 rgb, fixed3 rgbA, fixed3 rgbB, fixed3 rgbC, float ratio, float time, float val, float midStop, float fading, float shiftA, float shiftB, float shiftC, float useCC, float override, float3 debug) {
                 if (_DebugZone == 1) {
                     float timeDebug = (_Time.y / 1.22 + 5.0 * ratio);
                     return fixed4(debug.x, debug.y, debug.z, 1) * min(((sin(timeDebug * 2 * 3.14159265) + 1) / 2), 1.0);
                 }
 
-                if (x < midStop)
-                    rgb = rgbA * (0.5 - ratio) * 2 + rgbB * ratio * 2;
-                else
-                    rgb = rgbB * (1.0 - ratio) * 2 + rgbC * (ratio - 0.5) * 2;
+                if (isALActive() && useCC) {
+                    fixed3 hsvA = RGBToHSV(rgbA);
+                    fixed3 hsvC = RGBToHSV(rgbC);
+
+                    if (hsvA.x - hsvC.x > 0.5)
+                        hsvC.x += 1;
+                    else if (hsvC.x - hsvA.x > 0.5)
+                        hsvA.x += 1;
+
+                    rgb = HSVToRGB(hsvA * ratio + hsvC * (1 - ratio));
+                }
+                else {
+                    if (override) {
+                        if (x < midStop) {
+                            fixed3 hsvA = RGBToHSV(rgbA);
+                            fixed3 hsvB = RGBToHSV(rgbB);
+                            if (hsvA.x - hsvB.x > 0.5)
+                                hsvB.x += 1;
+                            else if (hsvB.x - hsvA.x > 0.5)
+                                hsvA.x += 1;
+                            rgb = HSVToRGB(hsvA * (0.5 - ratio) * 2 + hsvB * ratio * 2);
+                        }
+                        else {
+                            fixed3 hsvB = RGBToHSV(rgbB);
+                            fixed3 hsvC = RGBToHSV(rgbC);
+                            if (hsvB.x - hsvC.x > 0.5)
+                                hsvC.x += 1;
+                            else if (hsvC.x - hsvB.x > 0.5)
+                                hsvB.x += 1;
+                            rgb = HSVToRGB(hsvB * (1.0 - ratio) * 2 + hsvC * (ratio - 0.5) * 2);
+                        }
+                    }
+                    else {
+                        if (x < midStop) {
+                            fixed3 hsvA = RGBToHSV(rgbA);
+                            fixed3 hsvB = RGBToHSV(rgbB);
+                            if (shiftB > shiftA && hsvA.x > hsvB.x)
+                                hsvB.x += 1;
+                            else if (shiftA > shiftB && hsvB.x > hsvA.x)
+                                hsvA.x += 1;
+                            rgb = HSVToRGB(hsvA * (0.5 - ratio) * 2 + hsvB * ratio * 2);
+                        }
+                        else {
+                            fixed3 hsvB = RGBToHSV(rgbB);
+                            fixed3 hsvC = RGBToHSV(rgbC);
+                            if (shiftC > shiftB && hsvB.x > hsvC.x)
+                                hsvC.x += 1;
+                            else if (shiftB > shiftC && hsvC.x > hsvB.x)
+                                hsvB.x += 1;
+                            rgb = HSVToRGB(hsvB * (1.0 - ratio) * 2 + hsvC * (ratio - 0.5) * 2);
+                        }
+                    }
+                }
 
                 if (isALActive()) {
                     return fixed4(rgb.x, rgb.y, rgb.z, 1) * max(val, 0);
@@ -516,7 +558,6 @@
                         if (isALActive()) {
                             if (_ALccG1 && _ColorOverrideG1 == 0) {
                                 rgbA = getALStop(rgbA, _ALccG1StopA);
-                                rgbB = getALStopMid(rgbB, _ALccG1StopB, _ALccG1StopA, _ALccG1StopC);
                                 rgbC = getALStop(rgbC, _ALccG1StopC);
                             }
 
@@ -533,7 +574,7 @@
                             val = tex2D(_AudioTexture, uv).x;
                         }
 
-                        return getGradientOutput(IN.localTexcoord.x, rgb, rgbA, rgbB, rgbC, ratio, time, val, midStop, _FadingG1, fixed3(1, 0, 0));
+                        return getGradientOutput(IN.localTexcoord.x, rgb, rgbA, rgbB, rgbC, ratio, time, val, midStop, _FadingG1, _ShiftG1StopA, _ShiftG1StopB, _ShiftG1StopC, _ALccG1, _ColorOverrideG1, fixed3(1, 0, 0));
                     }
 
                     // Gradient 2
@@ -563,7 +604,6 @@
                         if (isALActive()) {
                             if (_ALccG2 && _ColorOverrideG2 == 0) {
                                 rgbA = getALStop(rgbA, _ALccG2StopA);
-                                rgbB = getALStopMid(rgbB, _ALccG2StopB, _ALccG2StopA, _ALccG2StopC);
                                 rgbC = getALStop(rgbC, _ALccG2StopC);
                             }
 
@@ -580,7 +620,7 @@
                             val = tex2D(_AudioTexture, uv).x;
                         }
 
-                        return getGradientOutput(IN.localTexcoord.x, rgb, rgbA, rgbB, rgbC, ratio, time, val, midStop, _FadingG2, fixed3(0, 1, 0));
+                        return getGradientOutput(IN.localTexcoord.x, rgb, rgbA, rgbB, rgbC, ratio, time, val, midStop, _FadingG2, _ShiftG2StopA, _ShiftG2StopB, _ShiftG2StopC, _ALccG2, _ColorOverrideG2, fixed3(0, 1, 0));
                     }
 
                     // Gradient 3
@@ -610,7 +650,6 @@
                         if (isALActive()) {
                             if (_ALccG3 && _ColorOverrideG3 == 0) {
                                 rgbA = getALStop(rgbA, _ALccG3StopA);
-                                rgbB = getALStopMid(rgbB, _ALccG3StopB, _ALccG3StopA, _ALccG3StopC);
                                 rgbC = getALStop(rgbC, _ALccG3StopC);
                             }
 
@@ -627,7 +666,7 @@
                             val = tex2D(_AudioTexture, uv).x;
                         }
 
-                        return getGradientOutput(IN.localTexcoord.x, rgb, rgbA, rgbB, rgbC, ratio, time, val, midStop, _FadingG3, fixed3(0, 0, 1));
+                        return getGradientOutput(IN.localTexcoord.x, rgb, rgbA, rgbB, rgbC, ratio, time, val, midStop, _FadingG3, _ShiftG3StopA, _ShiftG3StopB, _ShiftG3StopC, _ALccG3, _ColorOverrideG3, fixed3(0, 0, 1));
                     }
 
                     // Audio Reactive Pixel

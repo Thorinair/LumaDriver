@@ -62,15 +62,15 @@ This page allows for adjusting the way how [AudioLink](https://github.com/lleall
 
 * **Enabled** - Enables AudioLink integration.
 * **Automatic Switchover** - Monitors the audio throughput in AudioLink in order to decide whether idle animations should be playing instead when there is no audio.
+* **Maximize Colors** - Increases the intensity of ColorChord generated colors.
 * **Reactive Pixel Enabled** - Enables the AudioLink integration with the Legendary Shader Audio Reactivity features.
 * **Reactive Pixel Lows Band** - Defines AudioLink band to use for the Lows audio reactivity.
 * **Reactive Pixel Highs Band** - Defines AudioLink band to use for the Highs audio reactivity.
 * **Zone X Color Control** - Defines source of colors for the zone. Can be either the idle animation or one of the ColorChord colors.
 * **Zone X Audio Band** - Defines AudioLink band to use for the zone.
-* **Enable Gradient X Color Control** - Enables the color control of the gradient.
-* **Gradient X Stop A Color Control** - Defines source of colors for the first color stop. Can be either the idle animation or one of the ColorChord colors.
-* **Gradient X Stop B Color Control** - Defines source of colors for the middle color stop. Can be the idle animation, one of the ColorChord colors, or a blend of the start and end color stops.
-* **Gradient X Stop C Color Control** - Defines source of colors for the end color stop. Can be either the idle animation or one of the ColorChord colors.
+* **Enable Gradient X Color Control** - Enables the ColorChord control of the gradient.
+* **Gradient X Stop A Color Control** - Defines ColorChord source for the first color stop.
+* **Gradient X Stop C Color Control** - Defines ColorChord source for the end color stop.
 * **Gradient X Audio Band** - Defines AudioLink band to use for the gradient.
 * **Reverse Gradient X Audio** - Reverses the animation of the AudioLink flowing animation on the gradient.
 * **Gradient X Audio Length** - Shortens or lengthens the AudioLink flowing animation on the gradient.

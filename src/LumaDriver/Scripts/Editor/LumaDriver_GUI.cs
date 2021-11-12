@@ -66,6 +66,7 @@ public class LumaDriver_GUI : ShaderGUI
     void ShowPage_AudioLink() {
         ShowProperty("_ALOverride");
         ShowProperty("_ALAutomatic");
+        ShowProperty("_ALMaximize");
 
         ShowProperty("_ALReactivePixel");
         ShowProperty("_ReactiveBandLows");
@@ -82,7 +83,6 @@ public class LumaDriver_GUI : ShaderGUI
 
         ShowProperty("_ALccG1");
         ShowProperty("_ALccG1StopA");
-        ShowProperty("_ALccG1StopB");
         ShowProperty("_ALccG1StopC");
         ShowProperty("_BandG1");
         ShowProperty("_BandG1Reverse");
@@ -90,7 +90,6 @@ public class LumaDriver_GUI : ShaderGUI
 
         ShowProperty("_ALccG2");
         ShowProperty("_ALccG2StopA");
-        ShowProperty("_ALccG2StopB");
         ShowProperty("_ALccG2StopC");
         ShowProperty("_BandG2");
         ShowProperty("_BandG2Reverse");
@@ -98,7 +97,6 @@ public class LumaDriver_GUI : ShaderGUI
 
         ShowProperty("_ALccG3");
         ShowProperty("_ALccG3StopA");
-        ShowProperty("_ALccG3StopB");
         ShowProperty("_ALccG3StopC");
         ShowProperty("_BandG3");
         ShowProperty("_BandG3Reverse");
