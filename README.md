@@ -2,6 +2,8 @@
 
 The world-side [Furality Luma Glow Shader](https://furality.org/lumaglow) and [Furality Legendary Shader](https://furality.org/legendaryshader) support you have been waiting for! Built up from scratch, inspired by workings of [AudioLink](https://github.com/llealloo/vrc-udon-audio-link).
 
+**NOTE: This project is a derivative work and is not part of Furality Online Xperience or created by Furality, Inc.**
+
 A live demo is available in the [Luminescent Ledge](https://vrchat.com/home/world/wrld_fb4edc80-6c48-43f2-9bd1-2fa9f1345621) VRChat world!
 
 ## Features
