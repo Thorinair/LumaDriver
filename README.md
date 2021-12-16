@@ -16,9 +16,9 @@ A live demo is available in the [Luminescent Ledge](https://vrchat.com/home/worl
 * Debug functionalities.
 * Extreme level of customization.
 
-**NOTE:** Requires [AudioLink](https://github.com/llealloo/vrc-udon-audio-link) v0.2.6+ for the integration to properly function.
+**Requires:** [AudioLink](https://github.com/llealloo/vrc-udon-audio-link) v0.2.6+ for the integration to properly function.
 
-**Optional:** [VRSL](https://github.com/AcChosen/VR-Stage-Lighting) v1.10+ for DMX functionality
+**Optional:** [VR Stage Lighting](https://github.com/AcChosen/VR-Stage-Lighting) v1.10+ for DMX functionality.
 
 ## Usage
 1. Import the Unity package.
