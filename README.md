@@ -11,18 +11,21 @@ A live demo is available in the [Luminescent Ledge](https://vrchat.com/home/worl
 * Three gradients for Legendary Shader.
 * Audio Reactivity for Legendary Shader.
 * AudioLink integration, using ColorChord and bands to control the glow.
+* VR Stage Lighting (VRSL) integration, with a dedicated fixture definition.
 * Possibility to set custom colors using Udon.
 * Debug functionalities.
 * Extreme level of customization.
 
 **NOTE:** Requires [AudioLink](https://github.com/llealloo/vrc-udon-audio-link) v0.2.6+ for the integration to properly function.
+**Optional:** [VRSL](https://github.com/AcChosen/VR-Stage-Lighting) v1.10+ for DMX functionality
 
 ## Usage
 1. Import the Unity package.
 2. Drag the `LumaDriver` prefab into the scene.
 3. Make sure it is far away from the scene. It should be on Y=1000000 by default.
 4. If you wish to use AudioLink, you will have to enable it. Check the AudioLink section below to see how to do that.
-5. You are done! Enjoy the beautiful glow once more! Check below for customization options for the driver...
+5. If you wish to use VRSL DMX, you will have to enable it. Check the DMX Control section below to see how to do that and read through the VRSL Fixture Definition section to familiarize yourself with how the fixtures are defined.
+6. You are done! Enjoy the beautiful glow once more! Check below for customization options for the driver...
 
 ## Customization
 If you want to play around with the parameters, open the CustomRenderTexture in the following location: `LumaDriver/CustomRenderTexture/LumaDriver_CRT`, expand the shader parameters to be able to modify them to your liking. The parameters are split up on four separate pages for easier navigation.
@@ -60,7 +63,12 @@ This page allows for adjusting the behavior of idle animations. These are the sl
 
 ![alt text](https://raw.githubusercontent.com/Thorinair/LumaDriver/master/img/LumaDriverUI_2.png "LumaDriver AudioLink")
 
-This page allows for adjusting the way how [AudioLink](https://github.com/llealloo/vrc-udon-audio-link) interfaces with the driver. It is enough to simply just have AudioLink in the scene for the integration to work. All Color Control options can use AudioLink's ColorChord feature in order to have interesting and dynamic colors when music is playing.
+This page allows for adjusting the way how [AudioLink](https://github.com/llealloo/vrc-udon-audio-link) interfaces with the driver. All Color Control options can use AudioLink's ColorChord feature in order to have interesting and dynamic colors when music is playing. In order to enable AudioLink integration, follow the steps:
+
+1. Import AudioLink package and set it up in the world following official instructions.
+2. Check the **Enabled** checkbox on AudioLink page in LumaDriver's configuration.
+
+Below are explanations for different configuration options:
 
 * **Enabled** - Enables AudioLink integration.
 * **Automatic Switchover** - Monitors the audio throughput in AudioLink in order to decide whether idle animations should be playing instead when there is no audio.
@@ -89,6 +97,47 @@ This page allows for overriding the colors in all of the zones and bands. This c
 * **Gradient X Stop A Color Override** - The color to use for the first color stop of the gradient.
 * **Gradient X Stop B Color Override** - The color to use for the middle color stop of the gradient.
 * **Gradient X Stop C Color Override** - The color to use for the end color stop of the gradient.
+
+### DMX Control
+
+![alt text](https://raw.githubusercontent.com/Thorinair/LumaDriver/master/img/LumaDriverUI_4.png "LumaDriver DMX COntrol")
+
+This page allows for adjusting the way how [VRSL](https://github.com/AcChosen/VR-Stage-Lighting) interfaces with the driver. VRSL is a powerful way of delivering DMX data through a video feed in order to control LumaDriver in sync to a DJ set in a club environment. The integration can adjust intensities of all 4 zones and 3 gradients, change the colors and trigger strobe effects. In order to enable VRSL DMX integration, follow the steps:
+
+1. Import VRSL package and set it up in the world following official instructions.
+2. Check the **Enable DMX** checkbox on DMX Control page in LumaDriver's configuration.
+3. Make sure that the correct texture is assigned to the **DMX Render Texture** slot. It should be set automatically, but if not, it should reference the render texture that comes with the VRSL package and is located in the following path: `Assets\VRStageLighting\VR-Stage-Lighting\Textures\DMXRTViewer-RAWValues`
+4. Choose which fixture you wish to use using **Fixture ID**. Note that LumaDriver takes up **two** fixture slots, meaning that if you set for instance the ID to be 5, it will use fixtures 5 and 6.
+
+Below are explanations for different configuration options:
+
+* **DMX Enabled** - Enables VRSL DMX integration.
+* **Fixture ID** - Sets which fixture LumaDriver will use for the control. Note that this will use **two** fixtures, starting with the one set here.
+* **DMX Render Texture** - This is the render Texture captured by VRSL which contains the fixture control pixels. It should always be set to the texture that comes with VRSL and is located in the following path: `Assets\VRStageLighting\VR-Stage-Lighting\Textures\DMXRTViewer-RAWValues`
+* **Zone X DMX Intensity Control** - Toggles whether the DMX feed can control the intensity of a zone.
+* **Gradient X DMX Intensity Control** - Toggles whether the DMX feed can control the intensity of a gradient.
+* **DMX Strobe Control** - Toggles whether the DMX feed can trigger strobe effects.
+* **Zone X DMX Color Enable** - Toggles whether the DMX feed can control the color of a zone.
+* **Zone X DMX Color Source** - Defines the DMX color to use for the zone.
+* **Gradient X DMX Color Enable** - Toggles whether the DMX feed can control the color of a gradient.
+* **Gradient X Stop A DMX Color Source** - Defines the DMX color to use for the first color stop.
+* **Gradient X Stop C DMX Color Source** - Defines the DMX color to use for the end color stop.
+
+## VRSL Fixture Definition
+
+![alt text](https://raw.githubusercontent.com/Thorinair/LumaDriver/master/img/DMX_Guide.png "LumaDriver VRSL Fixture")
+
+Above is the definition for VRSL DMX fixture(s) which represent LumaDriver.
+
+* **Sector N** - This is the first sector and fixture for LumaDriver. It contains toggles, intensity controls and strobe effects.
+    - **Enable DMX** - This pixel should be set to a value higher than 127 to enable DMX control. Useful for toggling DMX functionality through the video feed itself.
+    - **Zone X Intensity** - These 4 pixels control the intensity of the 4 zones. Their value is directly multiplied with the existing intensity of the zones.
+    - **Gradient X Intensity** - These 3 pixels control the intensity of the 3 gradients. Their value is directly multiplied with the existing intensity of the gradients.
+    - **Strobe Speed** - This pixel controls how fast the LumaDriver will strobe. Values below 26 will not perform a strobing effect, while values above will control the speed.
+* **Sector N+1** - This is the second sector and fixture for LumaDriver. It contains color data for different zones and gradients. These colors can be freely reassigned in LumaDriver's config.
+    - **Color X R** - Pixel for the red channel of a color.
+    - **Color X G** - Pixel for the green channel of a color.
+    - **Color X B** - Pixel for the blue channel of a color.
 
 ## Making Your Own Shader
 Want to make your own LumaDriver compatible shader? The texture is accessible under the name `_Stored` and has a resolution of `512x288` pixels You can access the texture generated by the driver by getting it with the following in your shader:

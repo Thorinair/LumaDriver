@@ -18,6 +18,7 @@ public class LumaDriver_GUI : ShaderGUI
             case 1: ShowPage_IdleAnimations(); break;
             case 2: ShowPage_AudioLink();      break;
             case 3: ShowPage_ColorOverrides(); break;
+            case 4: ShowPage_DMXControl();     break;
         }
     }
     
@@ -125,6 +126,40 @@ public class LumaDriver_GUI : ShaderGUI
         ShowProperty("_ColourG3StopA");
         ShowProperty("_ColourG3StopB");
         ShowProperty("_ColourG3StopC");
+    }
+    
+    void ShowPage_DMXControl() {
+        ShowProperty("_DMXEnable");
+        ShowProperty("_DMXFixtureID");
+        ShowProperty("_DMXTex");
+
+        ShowProperty("_DMXintZ1");
+        ShowProperty("_DMXintZ2");
+        ShowProperty("_DMXintZ3");
+        ShowProperty("_DMXintZ4");
+        ShowProperty("_DMXintG1");
+        ShowProperty("_DMXintG2");
+        ShowProperty("_DMXintG3");
+        
+        ShowProperty("_DMXstrobe");
+
+        ShowProperty("_DMXccZ1Enable");
+        ShowProperty("_DMXccZ1");
+        ShowProperty("_DMXccZ2Enable");
+        ShowProperty("_DMXccZ2");
+        ShowProperty("_DMXccZ3Enable");
+        ShowProperty("_DMXccZ3");
+        ShowProperty("_DMXccZ4Enable");
+        ShowProperty("_DMXccZ4");
+        ShowProperty("_DMXccG1Enable");
+        ShowProperty("_DMXccG1StopA");
+        ShowProperty("_DMXccG1StopC");
+        ShowProperty("_DMXccG2Enable");
+        ShowProperty("_DMXccG2StopA");
+        ShowProperty("_DMXccG2StopC");
+        ShowProperty("_DMXccG3Enable");
+        ShowProperty("_DMXccG3StopA");
+        ShowProperty("_DMXccG3StopC");
     }
 
     void ShowProperty(string name) {
