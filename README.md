@@ -107,12 +107,12 @@ This page allows for adjusting the way how [VRSL](https://github.com/AcChosen/VR
 1. Import VRSL package and set it up in the world following official instructions.
 2. Check the **Enable DMX** checkbox on DMX Control page in LumaDriver's configuration.
 3. Make sure that the correct texture is assigned to the **DMX Render Texture** slot. It should be set automatically, but if not, it should reference the render texture that comes with the VRSL package and is located in the following path: `Assets\VRStageLighting\VR-Stage-Lighting\Textures\DMXRTViewer-RAWValues`
-4. Choose which fixture you wish to use using **Fixture ID**. Note that LumaDriver takes up **two** fixture slots, meaning that if you set for instance the ID to be 5, it will use fixtures 5 and 6.
+4. Choose which fixture you wish to use using **Fixture ID**. Note that LumaDriver takes up **two** sector slots, meaning that if you set for instance the ID to be 5, it will use sectors 5 and 6.
 
 Below are explanations for different configuration options:
 
 * **DMX Enabled** - Enables VRSL DMX integration.
-* **Fixture ID** - Sets which fixture LumaDriver will use for the control. Note that this will use **two** fixtures, starting with the one set here.
+* **Fixture ID** - Sets which fixture LumaDriver will use for the control. Note that this will use **two** sectors, starting with the one set here.
 * **DMX Render Texture** - This is the render Texture captured by VRSL which contains the fixture control pixels. It should always be set to the texture that comes with VRSL and is located in the following path: `Assets\VRStageLighting\VR-Stage-Lighting\Textures\DMXRTViewer-RAWValues`
 * **Zone X DMX Intensity Control** - Toggles whether the DMX feed can control the intensity of a zone.
 * **Gradient X DMX Intensity Control** - Toggles whether the DMX feed can control the intensity of a gradient.
@@ -129,12 +129,12 @@ Below are explanations for different configuration options:
 
 Above is the definition for VRSL DMX fixture(s) which represent LumaDriver.
 
-* **Sector N** - This is the first sector and fixture for LumaDriver. It contains toggles, intensity controls and strobe effects.
+* **Sector N** - This is the first sector for LumaDriver. It contains toggles, intensity controls and strobe effects.
     - **Enable DMX** - This pixel should be set to a value higher than 127 to enable DMX control. Useful for toggling DMX functionality through the video feed itself.
     - **Zone X Intensity** - These 4 pixels control the intensity of the 4 zones. Their value is directly multiplied with the existing intensity of the zones.
     - **Gradient X Intensity** - These 3 pixels control the intensity of the 3 gradients. Their value is directly multiplied with the existing intensity of the gradients.
     - **Strobe Speed** - This pixel controls how fast the LumaDriver will strobe. Values below 26 will not perform a strobing effect, while values above will control the speed.
-* **Sector N+1** - This is the second sector and fixture for LumaDriver. It contains color data for different zones and gradients. These colors can be freely reassigned in LumaDriver's config.
+* **Sector N+1** - This is the second sector for LumaDriver. It contains color data for different zones and gradients. These colors can be freely reassigned in LumaDriver's config.
     - **Color X R** - Pixel for the red channel of a color.
     - **Color X G** - Pixel for the green channel of a color.
     - **Color X B** - Pixel for the blue channel of a color.
