@@ -17,6 +17,7 @@ A live demo is available in the [Luminescent Ledge](https://vrchat.com/home/worl
 * Extreme level of customization.
 
 **NOTE:** Requires [AudioLink](https://github.com/llealloo/vrc-udon-audio-link) v0.2.6+ for the integration to properly function.
+
 **Optional:** [VRSL](https://github.com/AcChosen/VR-Stage-Lighting) v1.10+ for DMX functionality
 
 ## Usage
