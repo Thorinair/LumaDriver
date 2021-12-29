@@ -16,7 +16,7 @@ A live demo is available in the [Luminescent Ledge](https://vrchat.com/home/worl
 * Debug functionalities.
 * Extreme level of customization.
 
-**Requires:** [AudioLink](https://github.com/llealloo/vrc-udon-audio-link) v0.2.6 for the integration to properly function. **NOTE: ColorChord will not properly work with v.0.2.7, please wait for an update before updating AudioLink.**
+**Requires:** [AudioLink](https://github.com/llealloo/vrc-udon-audio-link) v0.2.6+ for the integration to properly function.
 
 **Optional:** [VR Stage Lighting](https://github.com/AcChosen/VR-Stage-Lighting) v1.10+ for DMX functionality.
 
