@@ -1,6 +1,10 @@
 # LumaDriver
 
-The world-side [Furality Luma Glow Shader](https://furality.org/lumaglow) and [Furality Legendary Shader](https://furality.org/legendaryshader) support you have been waiting for! Built up from scratch, inspired by workings of [AudioLink](https://github.com/llealloo/vrc-udon-audio-link).
+An unofficial VRChat world-side plugin designed to drive the various [Furality](https://furality.org/) shaders. Built up from scratch and inspired by workings of [AudioLink](https://github.com/llealloo/vrc-udon-audio-link). Capable of powering the following:
+
+* [Furality Luma Glow Shader](https://furality.org/lumaglow)
+* [Furality Legendary Shader](https://furality.org/legendaryshader)
+* [Furality Aqua Shader](https://furality.org/aqua-shader-info)
 
 **NOTE: This project is a derivative work and is not part of Furality Online Xperience or created by Furality, Inc.**
 
@@ -8,9 +12,9 @@ A live demo is available in the [Luminescent Ledge](https://vrchat.com/home/worl
 
 ## Features
 * Four Luma Glow / Hero and Villain zones for the respective shaders.
-* Three gradients for Legendary Shader.
-* Audio Reactivity for Legendary Shader.
-* AudioLink integration, using ColorChord and bands to control the glow.
+* Three gradients for Legendary and Aqua Shader.
+* Audio Reactivity for Legendary and Aqua Shader.
+* AudioLink integration, using Theme Colors and ColorChord for controlling the colors and bands to control the flashing.
 * VR Stage Lighting (VRSL) integration, with a dedicated fixture definition.
 * Possibility to set custom colors using Udon.
 * Debug functionalities.
@@ -18,7 +22,7 @@ A live demo is available in the [Luminescent Ledge](https://vrchat.com/home/worl
 
 **Requires:** [AudioLink](https://github.com/llealloo/vrc-udon-audio-link) v0.2.6+ for the integration to properly function.
 
-**Optional:** [VR Stage Lighting](https://github.com/AcChosen/VR-Stage-Lighting) v1.10+ for DMX functionality.
+**Optional:** [VR Stage Lighting](https://github.com/AcChosen/VR-Stage-Lighting) v1.10+ for DMX functionality. (NOTE: Currently doesn't support horizontal layout.)
 
 ## Usage
 1. Import the Unity package.
@@ -64,7 +68,7 @@ This page allows for adjusting the behavior of idle animations. These are the sl
 
 ![alt text](https://raw.githubusercontent.com/Thorinair/LumaDriver/master/img/LumaDriverUI_2.png "LumaDriver AudioLink")
 
-This page allows for adjusting the way how [AudioLink](https://github.com/llealloo/vrc-udon-audio-link) interfaces with the driver. All Color Control options can use AudioLink's ColorChord feature in order to have interesting and dynamic colors when music is playing. In order to enable AudioLink integration, follow the steps:
+This page allows for adjusting the way how [AudioLink](https://github.com/llealloo/vrc-udon-audio-link) interfaces with the driver. All Color Control options can use either AudioLink's Theme Colors or ColorChord feature in order to have interesting and dynamic colors when music is playing. In order to enable AudioLink integration, follow the steps:
 
 1. Import AudioLink package and set it up in the world following official instructions.
 2. Check the **Enabled** checkbox on AudioLink page in LumaDriver's configuration.
@@ -73,15 +77,16 @@ Below are explanations for different configuration options:
 
 * **Enabled** - Enables AudioLink integration.
 * **Automatic Switchover** - Monitors the audio throughput in AudioLink in order to decide whether idle animations should be playing instead when there is no audio.
-* **Maximize Colors** - Increases the intensity of ColorChord generated colors.
+* **Maximize Colors** - Maximizes the intensity of Theme Colors and ColorChord generated colors.
+* **Use Theme Colors** - Enables the usage of AudioLink Theme Colors for all Color Control options. Themes can be customized programatically on AudioLink or adjusted directly on the AudioLink Controller. By default, Theme Colors act as ColorChord. Disabling this option **forces** ColorChord instead.
 * **Reactive Pixel Enabled** - Enables the AudioLink integration with the Legendary Shader Audio Reactivity features.
 * **Reactive Pixel Lows Band** - Defines AudioLink band to use for the Lows audio reactivity.
 * **Reactive Pixel Highs Band** - Defines AudioLink band to use for the Highs audio reactivity.
-* **Zone X Color Control** - Defines source of colors for the zone. Can be either the idle animation or one of the ColorChord colors.
+* **Zone X Color Control** - Defines source of colors for the zone. Can be the idle animation, a Theme Color, or one of the ColorChord colors.
 * **Zone X Audio Band** - Defines AudioLink band to use for the zone.
-* **Enable Gradient X Color Control** - Enables the ColorChord control of the gradient.
-* **Gradient X Stop A Color Control** - Defines ColorChord source for the first color stop.
-* **Gradient X Stop C Color Control** - Defines ColorChord source for the end color stop.
+* **Enable Gradient X Color Control** - Enables the Theme Color or ColorChord control of the gradient.
+* **Gradient X Stop A Color Control** - Defines Theme Color or ColorChord source for the first color stop.
+* **Gradient X Stop C Color Control** - Defines Theme Color or ColorChord source for the end color stop.
 * **Gradient X Audio Band** - Defines AudioLink band to use for the gradient.
 * **Reverse Gradient X Audio** - Reverses the animation of the AudioLink flowing animation on the gradient.
 * **Gradient X Audio Length** - Shortens or lengthens the AudioLink flowing animation on the gradient.
@@ -155,7 +160,7 @@ Below is a table which lists locations of individual pixels and gradients, along
 
 | Data | Location | Channels | Description |
 | ---- | -------- | -------- | ----------- |
-| **Luma ON** | `0.629, 0.511` | Red | Controls whether old Luma Glow Shader is running. Always 255 red. |
+| **Luma ON** | `0.629, 0.511` | Red | Controls whether old Luma Glow Shader and Aqua Shader are running. Always 255 red. |
 | **Zone 1 (Heros 1)** | `0.856, 0.522` | RGB | Applies color for the Luma Glow Zone 1. Also counts as Heros 1. |
 | **Zone 2 (Villains 1)** | `0.856, 0.507` | RGB | Applies color for the Luma Glow Zone 2. Also counts as Villains 1. |
 | **Zone 3 (Heros 2)** | `0.864, 0.522` | RGB | Applies color for the Luma Glow Zone 3. Also counts as Heros 2. |

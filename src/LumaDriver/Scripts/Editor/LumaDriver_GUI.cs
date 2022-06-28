@@ -68,37 +68,69 @@ public class LumaDriver_GUI : ShaderGUI
         ShowProperty("_ALOverride");
         ShowProperty("_ALAutomatic");
         ShowProperty("_ALMaximize");
+        MaterialProperty _ALThemes = FindProperty("_ALThemes", properties);
+        editor.ShaderProperty(_ALThemes, _ALThemes.displayName);
 
         ShowProperty("_ALReactivePixel");
         ShowProperty("_ReactiveBandLows");
         ShowProperty("_ReactiveBandHighs");
 
-        ShowProperty("_ALccZ1");
+        if (_ALThemes.floatValue == 0)
+            ShowProperty("_ALccZ1");
+        else
+            ShowProperty("_ALttZ1");
         ShowProperty("_BandZ1");
-        ShowProperty("_ALccZ2");
+        if (_ALThemes.floatValue == 0)
+            ShowProperty("_ALccZ2");
+        else
+            ShowProperty("_ALttZ2");
         ShowProperty("_BandZ2");
-        ShowProperty("_ALccZ3");
+        if (_ALThemes.floatValue == 0)
+            ShowProperty("_ALccZ3");
+        else
+            ShowProperty("_ALttZ3");
         ShowProperty("_BandZ3");
-        ShowProperty("_ALccZ4");
+        if (_ALThemes.floatValue == 0)
+            ShowProperty("_ALccZ4");
+        else
+            ShowProperty("_ALttZ4");
         ShowProperty("_BandZ4");
 
         ShowProperty("_ALccG1");
-        ShowProperty("_ALccG1StopA");
-        ShowProperty("_ALccG1StopC");
+        if (_ALThemes.floatValue == 0)  {
+            ShowProperty("_ALccG1StopA");
+            ShowProperty("_ALccG1StopC");
+        }
+        else {
+            ShowProperty("_ALttG1StopA");
+            ShowProperty("_ALttG1StopC");
+        }
         ShowProperty("_BandG1");
         ShowProperty("_BandG1Reverse");
         ShowProperty("_BandG1Length");
 
         ShowProperty("_ALccG2");
-        ShowProperty("_ALccG2StopA");
-        ShowProperty("_ALccG2StopC");
+        if (_ALThemes.floatValue == 0)  {
+            ShowProperty("_ALccG2StopA");
+            ShowProperty("_ALccG2StopC");
+        }
+        else {
+            ShowProperty("_ALttG2StopA");
+            ShowProperty("_ALttG2StopC");
+        }
         ShowProperty("_BandG2");
         ShowProperty("_BandG2Reverse");
         ShowProperty("_BandG2Length");
 
         ShowProperty("_ALccG3");
-        ShowProperty("_ALccG3StopA");
-        ShowProperty("_ALccG3StopC");
+        if (_ALThemes.floatValue == 0)  {
+            ShowProperty("_ALccG3StopA");
+            ShowProperty("_ALccG3StopC");
+        }
+        else {
+            ShowProperty("_ALttG3StopA");
+            ShowProperty("_ALttG3StopC");
+        }
         ShowProperty("_BandG3");
         ShowProperty("_BandG3Reverse");
         ShowProperty("_BandG3Length");

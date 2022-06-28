@@ -10,8 +10,8 @@ Material:
   m_Name: LumaDriver_Driver
   m_Shader: {fileID: 4800000, guid: 26be09cd3367da94b85b01d138cb2e7a, type: 3}
   m_ShaderKeywords: _ALAUTOMATIC_ON _ALCCG1_ON _ALCOLORCHORD_ON _ALMAXIMIZE_ON _ALREACTIVEPIXEL_ON
-    _COLOROVERRIDE_ON _DMXCCZ1ENABLE_ON _DMXINTG1_ON _DMXINTZ1_ON _DMXINTZ2_ON _DMXINTZ3_ON
-    _DMXINTZ4_ON _DMXSTROBE_ON _ISENABLED_ON _LUMAPIXEL_ON _REACTIVEIDLE_ON
+    _ALTHEMES_ON _COLOROVERRIDE_ON _DMXCCZ1ENABLE_ON _DMXINTG1_ON _DMXINTZ1_ON _DMXINTZ2_ON
+    _DMXINTZ3_ON _DMXINTZ4_ON _DMXSTROBE_ON _ISENABLED_ON _LUMAPIXEL_ON _REACTIVEIDLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -30,6 +30,7 @@ Material:
     - _ALMaximize: 1
     - _ALOverride: 0
     - _ALReactivePixel: 1
+    - _ALThemes: 1
     - _ALccG1: 1
     - _ALccG1StopA: 0.1992
     - _ALccG1StopB: 0.5
@@ -46,6 +47,16 @@ Material:
     - _ALccZ2: 0.207
     - _ALccZ3: 0.2148
     - _ALccZ4: 0.2227
+    - _ALttG1StopA: 0.0039
+    - _ALttG1StopC: 0.0117
+    - _ALttG2StopA: 0.0195
+    - _ALttG2StopC: 0.0273
+    - _ALttG3StopA: 0.0039
+    - _ALttG3StopC: 0.0039
+    - _ALttZ1: 0.0039
+    - _ALttZ2: 0.0117
+    - _ALttZ3: 0.0195
+    - _ALttZ4: 0.0273
     - _BandG1: 0.0078
     - _BandG1Length: 0.2
     - _BandG1Reverse: 0

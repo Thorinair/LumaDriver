@@ -59,6 +59,7 @@
         [MaterialToggle] _ALOverride("Enabled", Float) = 0
         [MaterialToggle] _ALAutomatic("Automatic Switchover", Float) = 1
         [MaterialToggle] _ALMaximize("Maximize Colors", Float) = 1
+        [MaterialToggle] _ALThemes("Use Theme Colors", Float) = 1
         [Space(15)]
 
         [Header(AudioLink Reactive Pixel)]
@@ -66,20 +67,30 @@
         [MaterialToggle] _ALReactivePixel("Reactive Pixel Enabled", Float) = 1
         [Enum(Bass,0.0078,Low Mids,0.0234,High Mids,0.0390,Treble,0.0546)] _ReactiveBandLows("Reactive Pixel Lows Band", Float) = 0.0078
         [Enum(Bass,0.0078,Low Mids,0.0234,High Mids,0.0390,Treble,0.0546)] _ReactiveBandHighs("Reactive Pixel Highs Band", Float) = 0.0546
-        [Space(15)]
 
+        [Space(15)]
         [Header(AudioLink Zones)] 
         [Space(15)]
         [Enum(Idle Animations Color,0,ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccZ1("Zone 1 Color Control", Float) = 0.1992
+        [Space(15)]
+        [Header(AudioLink Zones)]
+        [Space(15)]
+        [Enum(Idle Animations Color,0,Theme Color 0,0.0039,Theme Color 1,0.0117,Theme Color 2,0.0195,Theme Color 3,0.0273)] _ALttZ1("Zone 1 Color Control", Float) = 0.0039
         [Enum(Bass,0.0078,Low Mids,0.0234,High Mids,0.0390,Treble,0.0546)] _BandZ1("Zone 1 Audio Band", Float) = 0.0546
         [Space(10)]
         [Enum(Idle Animations Color,0,ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccZ2("Zone 2 Color Control", Float) = 0.2070
+        [Space(10)]
+        [Enum(Idle Animations Color,0,Theme Color 0,0.0039,Theme Color 1,0.0117,Theme Color 2,0.0195,Theme Color 3,0.0273)] _ALttZ2("Zone 2 Color Control", Float) = 0.0117
         [Enum(Bass,0.0078,Low Mids,0.0234,High Mids,0.0390,Treble,0.0546)] _BandZ2("Zone 2 Audio Band", Float) = 0.0390
         [Space(10)]
         [Enum(Idle Animations Color,0,ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccZ3("Zone 3 Color Control", Float) = 0.2148
+        [Space(10)]
+        [Enum(Idle Animations Color,0,Theme Color 0,0.0039,Theme Color 1,0.0117,Theme Color 2,0.0195,Theme Color 3,0.0273)] _ALttZ3("Zone 3 Color Control", Float) = 0.0195
         [Enum(Bass,0.0078,Low Mids,0.0234,High Mids,0.0390,Treble,0.0546)] _BandZ3("Zone 3 Audio Band", Float) = 0.0078
         [Space(10)]
         [Enum(Idle Animations Color,0,ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccZ4("Zone 4 Color Control", Float) = 0.2227
+        [Space(10)]
+        [Enum(Idle Animations Color,0,Theme Color 0,0.0039,Theme Color 1,0.0117,Theme Color 2,0.0195,Theme Color 3,0.0273)] _ALttZ4("Zone 4 Color Control", Float) = 0.0273
         [Enum(Bass,0.0078,Low Mids,0.0234,High Mids,0.0390,Treble,0.0546)] _BandZ4("Zone 4 Audio Band", Float) = 0.0234
         [Space(15)]
 
@@ -88,6 +99,8 @@
         [MaterialToggle] _ALccG1("Enable Gradient 1 Color Control", Float) = 1
         [Enum(ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG1StopA("Gradient 1 Stop A Color Control", Float) = 0.1992
         [Enum(ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG1StopC("Gradient 1 Stop C Color Control", Float) = 0.2070
+        [Enum(Theme Color 0,0.0039,Theme Color 1,0.0117,Theme Color 2,0.0195,Theme Color 3,0.0273)] _ALttG1StopA("Gradient 1 Stop A Color Control", Float) = 0.0039
+        [Enum(Theme Color 0,0.0039,Theme Color 1,0.0117,Theme Color 2,0.0195,Theme Color 3,0.0273)] _ALttG1StopC("Gradient 1 Stop C Color Control", Float) = 0.0117
         [Enum(Bass,0.0078,Low Mids,0.0234,High Mids,0.0390,Treble,0.0546)] _BandG1("Gradient 1 Audio Band", Float) = 0.0078
         [MaterialToggle] _BandG1Reverse("Reverse Gradient 1 Audio", Float) = 0
         _BandG1Length ("Gradient 1 Audio Length", Range(0, 1)) = 0.2
@@ -95,6 +108,8 @@
         [MaterialToggle] _ALccG2("Enable Gradient 2 Color Control", Float) = 1
         [Enum(ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG2StopA("Gradient 2 Stop A Color Control", Float) = 0.2148
         [Enum(ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG2StopC("Gradient 2 Stop C Color Control", Float) = 0.2227
+        [Enum(Theme Color 0,0.0039,Theme Color 1,0.0117,Theme Color 2,0.0195,Theme Color 3,0.0273)] _ALttG2StopA("Gradient 2 Stop A Color Control", Float) = 0.0195
+        [Enum(Theme Color 0,0.0039,Theme Color 1,0.0117,Theme Color 2,0.0195,Theme Color 3,0.0273)] _ALttG2StopC("Gradient 2 Stop C Color Control", Float) = 0.0273
         [Enum(Bass,0.0078,Low Mids,0.0234,High Mids,0.0390,Treble,0.0546)] _BandG2("Gradient 2 Audio Band", Float) = 0.0546
         [MaterialToggle] _BandG2Reverse("Reverse Gradient 2 Audio", Float) = 0
         _BandG2Length ("Gradient 2 Audio Length", Range(0, 1)) = 0.2
@@ -102,6 +117,8 @@
         [MaterialToggle] _ALccG3("Enable Gradient 3 Color Control", Float) = 0
         [Enum(ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG3StopA("Gradient 3 Stop A Color Control", Float) = 0.1992
         [Enum(ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG3StopC("Gradient 3 Stop C Color Control", Float) = 0.1992
+        [Enum(Theme Color 0,0.0039,Theme Color 1,0.0117,Theme Color 2,0.0195,Theme Color 3,0.0273)] _ALttG3StopA("Gradient 3 Stop A Color Control", Float) = 0.0039
+        [Enum(Theme Color 0,0.0039,Theme Color 1,0.0117,Theme Color 2,0.0195,Theme Color 3,0.0273)] _ALttG3StopC("Gradient 3 Stop C Color Control", Float) = 0.0039
         [Enum(Bass,0.0078,Low Mids,0.0234,High Mids,0.0390,Treble,0.0546)] _BandG3("Gradient 3 Audio Band", Float) = 0.0390
         [MaterialToggle] _BandG3Reverse("Reverse Gradient 3 Audio", Float) = 0
         _BandG3Length ("Gradient 3 Audio Length", Range(0, 1)) = 1.0
@@ -246,22 +263,29 @@
             float _ALOverride;
             float _ALAutomatic;
             float _ALMaximize;
+            float _ALThemes;
             float _ALReactivePixel;
             float _ReactiveBandLows;
             float _ReactiveBandHighs;
 
             float _ALccZ1;
+            float _ALttZ1;
             float _BandZ1;
             float _ALccZ2;
+            float _ALttZ2;
             float _BandZ2;
             float _ALccZ3;
+            float _ALttZ3;
             float _BandZ3;
             float _ALccZ4;
+            float _ALttZ4;
             float _BandZ4;
 
             float _ALccG1;
             float _ALccG1StopA;
             float _ALccG1StopC;
+            float _ALttG1StopA;
+            float _ALttG1StopC;
             float _BandG1;
             float _BandG1Reverse;
             float _BandG1Length;
@@ -269,6 +293,8 @@
             float _ALccG2;
             float _ALccG2StopA;
             float _ALccG2StopC;
+            float _ALttG2StopA;
+            float _ALttG2StopC;
             float _BandG2;
             float _BandG2Reverse;
             float _BandG2Length;
@@ -276,6 +302,8 @@
             float _ALccG3;
             float _ALccG3StopA;
             float _ALccG3StopC;
+            float _ALttG3StopA;
+            float _ALttG3StopC;
             float _BandG3;
             float _BandG3Reverse;
             float _BandG3Length;
@@ -381,10 +409,18 @@
                 return false;
             }
 
-            fixed3 getALStop(fixed3 rgb, float ccStop) {
-                if (ccStop != 0) {
-                    rgb = tex2D(_AudioTexture, float2(ccStop, 1.0 / 128 + (1.0 / 64) * 22));
-                    rgb = maximize(rgb);
+            fixed3 getALStop(fixed3 rgb, float ccStop, float ttStop) {
+                if (_ALThemes) {
+                    if (ttStop != 0) {
+                        rgb = tex2D(_AudioTexture, float2(ttStop, 1.0 / 128 + (1.0 / 64) * 23));
+                        rgb = maximize(rgb);
+                    }
+                }
+                else {
+                    if (ccStop != 0) {
+                        rgb = tex2D(_AudioTexture, float2(ccStop, 1.0 / 128 + (1.0 / 64) * 22));
+                        rgb = maximize(rgb);
+                    }
                 }
                 return rgb;
             }
@@ -560,9 +596,17 @@
                                 if (isALOn) {
                                     float2 uv = float2(1.0 / 256, _BandZ1);
                                     val = tex2D(_AudioTexture, uv).x;
-                                    if (_ALccZ1 != 0 && (!isDMXOn || _DMXccZ1Enable == 0)) {
-                                        rgb = tex2D(_AudioTexture, float2(_ALccZ1, 1.0 / 128 + (1.0 / 64) * 22));
-                                        rgb = maximize(rgb);
+                                    if (_ALThemes) {
+                                        if (_ALttZ1 != 0 && (!isDMXOn || _DMXccZ1Enable == 0)) {
+                                            rgb = tex2D(_AudioTexture, float2(_ALttZ1, 1.0 / 128 + (1.0 / 64) * 23));
+                                            rgb = maximize(rgb);
+                                        }
+                                    }
+                                    else {
+                                        if (_ALccZ1 != 0 && (!isDMXOn || _DMXccZ1Enable == 0)) {
+                                            rgb = tex2D(_AudioTexture, float2(_ALccZ1, 1.0 / 128 + (1.0 / 64) * 22));
+                                            rgb = maximize(rgb);
+                                        }
                                     }
                                 }
                                 else if (!isDMXOn || _DMXccZ1Enable == 0) {
@@ -589,9 +633,17 @@
                                 if (isALOn) {
                                     float2 uv = float2(1.0 / 256, _BandZ2);
                                     val = tex2D(_AudioTexture, uv).x;
-                                    if (_ALccZ2 != 0 && (!isDMXOn || _DMXccZ2Enable == 0)) {
-                                        rgb = tex2D(_AudioTexture, float2(_ALccZ2, 1.0 / 128 + (1.0 / 64) * 22));
-                                        rgb = maximize(rgb);
+                                    if (_ALThemes) {
+                                        if (_ALttZ2 != 0 && (!isDMXOn || _DMXccZ2Enable == 0)) {
+                                            rgb = tex2D(_AudioTexture, float2(_ALttZ2, 1.0 / 128 + (1.0 / 64) * 23));
+                                            rgb = maximize(rgb);
+                                        }
+                                    }
+                                    else {
+                                        if (_ALccZ2 != 0 && (!isDMXOn || _DMXccZ2Enable == 0)) {
+                                            rgb = tex2D(_AudioTexture, float2(_ALccZ2, 1.0 / 128 + (1.0 / 64) * 22));
+                                            rgb = maximize(rgb);
+                                        }
                                     }
                                 }
                                 else if (!isDMXOn || _DMXccZ2Enable == 0) {
@@ -618,9 +670,17 @@
                                 if (isALOn) {
                                     float2 uv = float2(1.0 / 256, _BandZ3);
                                     val = tex2D(_AudioTexture, uv).x;
-                                    if (_ALccZ3 != 0 && (!isDMXOn || _DMXccZ3Enable == 0)) {
-                                        rgb = tex2D(_AudioTexture, float2(_ALccZ3, 1.0 / 128 + (1.0 / 64) * 22));
-                                        rgb = maximize(rgb);
+                                    if (_ALThemes) {
+                                        if (_ALttZ3 != 0 && (!isDMXOn || _DMXccZ3Enable == 0)) {
+                                            rgb = tex2D(_AudioTexture, float2(_ALttZ3, 1.0 / 128 + (1.0 / 64) * 23));
+                                            rgb = maximize(rgb);
+                                        }
+                                    }
+                                    else {
+                                        if (_ALccZ3 != 0 && (!isDMXOn || _DMXccZ3Enable == 0)) {
+                                            rgb = tex2D(_AudioTexture, float2(_ALccZ3, 1.0 / 128 + (1.0 / 64) * 22));
+                                            rgb = maximize(rgb);
+                                        }                                        
                                     }
                                 }
                                 else if (!isDMXOn || _DMXccZ3Enable == 0) {
@@ -648,9 +708,17 @@
                                 if (isALOn) {
                                     float2 uv = float2(1.0 / 256, _BandZ4);
                                     val = tex2D(_AudioTexture, uv).x;
-                                    if (_ALccZ4 != 0 && (!isDMXOn || _DMXccZ4Enable == 0)) {
-                                        rgb = tex2D(_AudioTexture, float2(_ALccZ4, 1.0 / 128 + (1.0 / 64) * 22));
-                                        rgb = maximize(rgb);
+                                    if (_ALThemes) {
+                                        if (_ALttZ4 != 0 && (!isDMXOn || _DMXccZ4Enable == 0)) {
+                                            rgb = tex2D(_AudioTexture, float2(_ALttZ4, 1.0 / 128 + (1.0 / 64) * 23));
+                                            rgb = maximize(rgb);
+                                        }
+                                    }
+                                    else {
+                                        if (_ALccZ4 != 0 && (!isDMXOn || _DMXccZ4Enable == 0)) {
+                                            rgb = tex2D(_AudioTexture, float2(_ALccZ4, 1.0 / 128 + (1.0 / 64) * 22));
+                                            rgb = maximize(rgb);
+                                        }
                                     }
                                 }
                                 else if (!isDMXOn || _DMXccZ4Enable == 0) {
@@ -705,8 +773,8 @@
                         // AUDIOLINK
                         if (isALOn) {
                             if (_ALccG1 && _ColorOverrideG1 == 0 && (!isDMXOn || _DMXccG1Enable == 0)) {
-                                rgbA = getALStop(rgbA, _ALccG1StopA);
-                                rgbC = getALStop(rgbC, _ALccG1StopC);
+                                rgbA = getALStop(rgbA, _ALccG1StopA, _ALttG1StopA);
+                                rgbC = getALStop(rgbC, _ALccG1StopC, _ALttG1StopC);
                             }
 
                             float2 uv;
@@ -760,8 +828,8 @@
                         // AUDIOLINK
                         if (isALOn) {
                             if (_ALccG2 && _ColorOverrideG2 == 0 && (!isDMXOn || _DMXccG2Enable == 0)) {
-                                rgbA = getALStop(rgbA, _ALccG2StopA);
-                                rgbC = getALStop(rgbC, _ALccG2StopC);
+                                rgbA = getALStop(rgbA, _ALccG2StopA, _ALttG2StopA);
+                                rgbC = getALStop(rgbC, _ALccG2StopC, _ALttG2StopC);
                             }
 
                             float2 uv;
@@ -815,8 +883,8 @@
                         // AUDIOLINK
                         if (isALOn) {
                             if (_ALccG3 && _ColorOverrideG3 == 0 && (!isDMXOn || _DMXccG3Enable == 0)) {
-                                rgbA = getALStop(rgbA, _ALccG3StopA);
-                                rgbC = getALStop(rgbC, _ALccG3StopC);
+                                rgbA = getALStop(rgbA, _ALccG3StopA, _ALttG3StopA);
+                                rgbC = getALStop(rgbC, _ALccG3StopC, _ALttG3StopC);
                             }
 
                             float2 uv;
