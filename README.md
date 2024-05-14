@@ -1,3 +1,5 @@
+If you are looking for the ChilloutVR version, click [here](https://github.com/Thorinair/LumaDriver-for-ChilloutVR).
+
 # LumaDriver
 
 An unofficial VRChat world-side plugin designed to drive the various [Furality](https://furality.org/) shaders. Built up from scratch and inspired by workings of [AudioLink](https://github.com/llealloo/vrc-udon-audio-link). Capable of powering the following:
