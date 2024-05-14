@@ -2,22 +2,53 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: LumaDriver_Driver
   m_Shader: {fileID: 4800000, guid: 26be09cd3367da94b85b01d138cb2e7a, type: 3}
-  m_ShaderKeywords: _ALAUTOMATIC_ON _ALCCG1_ON _ALCOLORCHORD_ON _ALMAXIMIZE_ON _ALREACTIVEPIXEL_ON
-    _ALTHEMES_ON _COLOROVERRIDE_ON _DMXCCZ1ENABLE_ON _DMXINTG1_ON _DMXINTZ1_ON _DMXINTZ2_ON
-    _DMXINTZ3_ON _DMXINTZ4_ON _DMXSTROBE_ON _ISENABLED_ON _LUMAPIXEL_ON _REACTIVEIDLE_ON
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _ALAUTOMATIC_ON
+  - _ALCCG1_ON
+  - _ALCCG2_ON
+  - _ALCOLORCHORD_ON
+  - _ALMAXIMIZE_ON
+  - _ALREACTIVEPIXEL_ON
+  - _ALTHEMES_ON
+  - _COLOROVERRIDE_ON
+  - _DMXCCG1ENABLE_ON
+  - _DMXCCG2ENABLE_ON
+  - _DMXCCG3ENABLE_ON
+  - _DMXCCZ1ENABLE_ON
+  - _DMXCCZ2ENABLE_ON
+  - _DMXCCZ3ENABLE_ON
+  - _DMXCCZ4ENABLE_ON
+  - _DMXINTG1_ON
+  - _DMXINTG2_ON
+  - _DMXINTG3_ON
+  - _DMXINTZ1_ON
+  - _DMXINTZ2_ON
+  - _DMXINTZ3_ON
+  - _DMXINTZ4_ON
+  - _DMXSTROBE_ON
+  - _FADINGG1_ON
+  - _FADINGG2_ON
+  - _FADINGG3_ON
+  - _ISENABLED_ON
+  - _LUMAPIXEL_ON
+  - _REACTIVEIDLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -25,6 +56,7 @@ Material:
         m_Texture: {fileID: 8400000, guid: 159c71081e572e648a894d41fca32894, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _ALAutomatic: 1
     - _ALMaximize: 1
@@ -32,44 +64,44 @@ Material:
     - _ALReactivePixel: 1
     - _ALThemes: 1
     - _ALccG1: 1
-    - _ALccG1StopA: 0.1992
+    - _ALccG1StopA: 1
     - _ALccG1StopB: 0.5
-    - _ALccG1StopC: 0.207
+    - _ALccG1StopC: 2
     - _ALccG2: 1
-    - _ALccG2StopA: 0.2148
+    - _ALccG2StopA: 3
     - _ALccG2StopB: 0.5
-    - _ALccG2StopC: 0.2227
+    - _ALccG2StopC: 4
     - _ALccG3: 0
-    - _ALccG3StopA: 0.1992
+    - _ALccG3StopA: 1
     - _ALccG3StopB: 0
-    - _ALccG3StopC: 0.1992
-    - _ALccZ1: 0.1992
-    - _ALccZ2: 0.207
-    - _ALccZ3: 0.2148
-    - _ALccZ4: 0.2227
-    - _ALttG1StopA: 0.0039
-    - _ALttG1StopC: 0.0117
-    - _ALttG2StopA: 0.0195
-    - _ALttG2StopC: 0.0273
-    - _ALttG3StopA: 0.0039
-    - _ALttG3StopC: 0.0039
-    - _ALttZ1: 0.0039
-    - _ALttZ2: 0.0117
-    - _ALttZ3: 0.0195
-    - _ALttZ4: 0.0273
-    - _BandG1: 0.0078
+    - _ALccG3StopC: 1
+    - _ALccZ1: 1
+    - _ALccZ2: 2
+    - _ALccZ3: 3
+    - _ALccZ4: 4
+    - _ALttG1StopA: 1
+    - _ALttG1StopC: 2
+    - _ALttG2StopA: 3
+    - _ALttG2StopC: 4
+    - _ALttG3StopA: 1
+    - _ALttG3StopC: 1
+    - _ALttZ1: 1
+    - _ALttZ2: 2
+    - _ALttZ3: 3
+    - _ALttZ4: 4
+    - _BandG1: 0
     - _BandG1Length: 0.2
     - _BandG1Reverse: 0
-    - _BandG2: 0.0546
+    - _BandG2: 3
     - _BandG2Length: 0.2
     - _BandG2Reverse: 0
-    - _BandG3: 0.0234
+    - _BandG3: 2
     - _BandG3Length: 1
     - _BandG3Reverse: 0
-    - _BandZ1: 0.0546
-    - _BandZ2: 0.039
-    - _BandZ3: 0.0078
-    - _BandZ4: 0.0234
+    - _BandZ1: 3
+    - _BandZ2: 2
+    - _BandZ3: 0
+    - _BandZ4: 1
     - _ColorOverrideG1: 0
     - _ColorOverrideG2: 0
     - _ColorOverrideG3: 0
@@ -132,15 +164,15 @@ Material:
     - _MidG2Offset: 0.5
     - _MidG3Offset: 0.5
     - _MinimumBrightness: 0.005
-    - _Page: 0
+    - _Page: 2
     - _PulseG1Speed: 6.1
     - _PulseG2Speed: 6.1
     - _PulseG3Speed: 20
     - _PulseSpeed: 6.1
     - _RGBSpeed: 10
     - _ReactiveBandBass: 0.0078
-    - _ReactiveBandHighs: 0.0546
-    - _ReactiveBandLows: 0.0078
+    - _ReactiveBandHighs: 3
+    - _ReactiveBandLows: 0
     - _ReactiveBandTreble: 0.0546
     - _ReactiveIdle: 1
     - _ShiftG1StopA: 0
@@ -176,3 +208,4 @@ Material:
     - _ColourZ2: {r: 0, g: 1, b: 0, a: 1}
     - _ColourZ3: {r: 0, g: 0, b: 1, a: 1}
     - _ColourZ4: {r: 1, g: 1, b: 0, a: 1}
+  m_BuildTextureStacks: []

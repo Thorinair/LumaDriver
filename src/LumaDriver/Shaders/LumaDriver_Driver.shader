@@ -65,61 +65,61 @@
         [Header(AudioLink Reactive Pixel)]
         [Space(15)]
         [MaterialToggle] _ALReactivePixel("Reactive Pixel Enabled", Float) = 1
-        [Enum(Bass,0.0078,Low Mids,0.0234,High Mids,0.0390,Treble,0.0546)] _ReactiveBandLows("Reactive Pixel Lows Band", Float) = 0.0078
-        [Enum(Bass,0.0078,Low Mids,0.0234,High Mids,0.0390,Treble,0.0546)] _ReactiveBandHighs("Reactive Pixel Highs Band", Float) = 0.0546
+        [Enum(Bass,0,Low Mids,1,High Mids,2,Treble,3)] _ReactiveBandLows("Reactive Pixel Lows Band", Float) = 0
+        [Enum(Bass,0,Low Mids,1,High Mids,2,Treble,3)] _ReactiveBandHighs("Reactive Pixel Highs Band", Float) = 3
 
         [Space(15)]
         [Header(AudioLink Zones)] 
         [Space(15)]
-        [Enum(Idle Animations Color,0,ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccZ1("Zone 1 Color Control", Float) = 0.1992
+        [Enum(Idle Animations Color,0,ColorChord 1,1,ColorChord 2,2,ColorChord 3,3,ColorChord 4,4)] _ALccZ1("Zone 1 Color Control", Float) = 1
         [Space(15)]
         [Header(AudioLink Zones)]
         [Space(15)]
-        [Enum(Idle Animations Color,0,Theme Color 0,0.0039,Theme Color 1,0.0117,Theme Color 2,0.0195,Theme Color 3,0.0273)] _ALttZ1("Zone 1 Color Control", Float) = 0.0039
-        [Enum(Bass,0.0078,Low Mids,0.0234,High Mids,0.0390,Treble,0.0546)] _BandZ1("Zone 1 Audio Band", Float) = 0.0546
+        [Enum(Idle Animations Color,0,Theme Color 0,1,Theme Color 1,2,Theme Color 2,3,Theme Color 3,4)] _ALttZ1("Zone 1 Color Control", Float) = 1
+        [Enum(Bass,0,Low Mids,1,High Mids,2,Treble,3)] _BandZ1("Zone 1 Audio Band", Float) = 3
         [Space(10)]
-        [Enum(Idle Animations Color,0,ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccZ2("Zone 2 Color Control", Float) = 0.2070
+        [Enum(Idle Animations Color,0,ColorChord 1,1,ColorChord 2,2,ColorChord 3,3,ColorChord 4,4)] _ALccZ2("Zone 2 Color Control", Float) = 2
         [Space(10)]
-        [Enum(Idle Animations Color,0,Theme Color 0,0.0039,Theme Color 1,0.0117,Theme Color 2,0.0195,Theme Color 3,0.0273)] _ALttZ2("Zone 2 Color Control", Float) = 0.0117
-        [Enum(Bass,0.0078,Low Mids,0.0234,High Mids,0.0390,Treble,0.0546)] _BandZ2("Zone 2 Audio Band", Float) = 0.0390
+        [Enum(Idle Animations Color,0,Theme Color 0,1,Theme Color 1,2,Theme Color 2,3,Theme Color 3,4)] _ALttZ2("Zone 2 Color Control", Float) = 2
+        [Enum(Bass,0,Low Mids,1,High Mids,2,Treble,3)] _BandZ2("Zone 2 Audio Band", Float) = 2
         [Space(10)]
-        [Enum(Idle Animations Color,0,ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccZ3("Zone 3 Color Control", Float) = 0.2148
+        [Enum(Idle Animations Color,0,ColorChord 1,1,ColorChord 2,2,ColorChord 3,3,ColorChord 4,4)] _ALccZ3("Zone 3 Color Control", Float) = 3
         [Space(10)]
-        [Enum(Idle Animations Color,0,Theme Color 0,0.0039,Theme Color 1,0.0117,Theme Color 2,0.0195,Theme Color 3,0.0273)] _ALttZ3("Zone 3 Color Control", Float) = 0.0195
-        [Enum(Bass,0.0078,Low Mids,0.0234,High Mids,0.0390,Treble,0.0546)] _BandZ3("Zone 3 Audio Band", Float) = 0.0078
+        [Enum(Idle Animations Color,0,Theme Color 0,1,Theme Color 1,2,Theme Color 2,3,Theme Color 3,4)] _ALttZ3("Zone 3 Color Control", Float) = 3
+        [Enum(Bass,0,Low Mids,1,High Mids,2,Treble,3)] _BandZ3("Zone 3 Audio Band", Float) = 0
         [Space(10)]
-        [Enum(Idle Animations Color,0,ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccZ4("Zone 4 Color Control", Float) = 0.2227
+        [Enum(Idle Animations Color,0,ColorChord 1,1,ColorChord 2,2,ColorChord 3,3,ColorChord 4,4)] _ALccZ4("Zone 4 Color Control", Float) = 4
         [Space(10)]
-        [Enum(Idle Animations Color,0,Theme Color 0,0.0039,Theme Color 1,0.0117,Theme Color 2,0.0195,Theme Color 3,0.0273)] _ALttZ4("Zone 4 Color Control", Float) = 0.0273
-        [Enum(Bass,0.0078,Low Mids,0.0234,High Mids,0.0390,Treble,0.0546)] _BandZ4("Zone 4 Audio Band", Float) = 0.0234
+        [Enum(Idle Animations Color,0,Theme Color 0,1,Theme Color 1,2,Theme Color 2,3,Theme Color 3,4)] _ALttZ4("Zone 4 Color Control", Float) = 4
+        [Enum(Bass,0,Low Mids,1,High Mids,2,Treble,3)] _BandZ4("Zone 4 Audio Band", Float) = 1
         [Space(15)]
 
         [Header(AudioLink Gradients)]
         [Space(15)]
         [MaterialToggle] _ALccG1("Enable Gradient 1 Color Control", Float) = 1
-        [Enum(ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG1StopA("Gradient 1 Stop A Color Control", Float) = 0.1992
-        [Enum(ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG1StopC("Gradient 1 Stop C Color Control", Float) = 0.2070
-        [Enum(Theme Color 0,0.0039,Theme Color 1,0.0117,Theme Color 2,0.0195,Theme Color 3,0.0273)] _ALttG1StopA("Gradient 1 Stop A Color Control", Float) = 0.0039
-        [Enum(Theme Color 0,0.0039,Theme Color 1,0.0117,Theme Color 2,0.0195,Theme Color 3,0.0273)] _ALttG1StopC("Gradient 1 Stop C Color Control", Float) = 0.0117
-        [Enum(Bass,0.0078,Low Mids,0.0234,High Mids,0.0390,Treble,0.0546)] _BandG1("Gradient 1 Audio Band", Float) = 0.0078
+        [Enum(ColorChord 1,1,ColorChord 2,2,ColorChord 3,3,ColorChord 4,4)] _ALccG1StopA("Gradient 1 Stop A Color Control", Float) = 1
+        [Enum(ColorChord 1,1,ColorChord 2,2,ColorChord 3,3,ColorChord 4,4)] _ALccG1StopC("Gradient 1 Stop C Color Control", Float) = 2
+        [Enum(Theme Color 0,1,Theme Color 1,2,Theme Color 2,3,Theme Color 3,4)] _ALttG1StopA("Gradient 1 Stop A Color Control", Float) = 1
+        [Enum(Theme Color 0,1,Theme Color 1,2,Theme Color 2,3,Theme Color 3,4)] _ALttG1StopC("Gradient 1 Stop C Color Control", Float) = 2
+        [Enum(Bass,0,Low Mids,1,High Mids,2,Treble,3)] _BandG1("Gradient 1 Audio Band", Float) = 0
         [MaterialToggle] _BandG1Reverse("Reverse Gradient 1 Audio", Float) = 0
         _BandG1Length ("Gradient 1 Audio Length", Range(0, 1)) = 0.2
         [Space(10)]
         [MaterialToggle] _ALccG2("Enable Gradient 2 Color Control", Float) = 1
-        [Enum(ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG2StopA("Gradient 2 Stop A Color Control", Float) = 0.2148
-        [Enum(ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG2StopC("Gradient 2 Stop C Color Control", Float) = 0.2227
-        [Enum(Theme Color 0,0.0039,Theme Color 1,0.0117,Theme Color 2,0.0195,Theme Color 3,0.0273)] _ALttG2StopA("Gradient 2 Stop A Color Control", Float) = 0.0195
-        [Enum(Theme Color 0,0.0039,Theme Color 1,0.0117,Theme Color 2,0.0195,Theme Color 3,0.0273)] _ALttG2StopC("Gradient 2 Stop C Color Control", Float) = 0.0273
-        [Enum(Bass,0.0078,Low Mids,0.0234,High Mids,0.0390,Treble,0.0546)] _BandG2("Gradient 2 Audio Band", Float) = 0.0546
+        [Enum(ColorChord 1,1,ColorChord 2,2,ColorChord 3,3,ColorChord 4,4)] _ALccG2StopA("Gradient 2 Stop A Color Control", Float) = 3
+        [Enum(ColorChord 1,1,ColorChord 2,2,ColorChord 3,3,ColorChord 4,4)] _ALccG2StopC("Gradient 2 Stop C Color Control", Float) = 4
+        [Enum(Theme Color 0,1,Theme Color 1,2,Theme Color 2,3,Theme Color 3,4)] _ALttG2StopA("Gradient 2 Stop A Color Control", Float) = 3
+        [Enum(Theme Color 0,1,Theme Color 1,2,Theme Color 2,3,Theme Color 3,4)] _ALttG2StopC("Gradient 2 Stop C Color Control", Float) = 4
+        [Enum(Bass,0,Low Mids,1,High Mids,2,Treble,3)] _BandG2("Gradient 2 Audio Band", Float) = 3
         [MaterialToggle] _BandG2Reverse("Reverse Gradient 2 Audio", Float) = 0
         _BandG2Length ("Gradient 2 Audio Length", Range(0, 1)) = 0.2
         [Space(10)]
         [MaterialToggle] _ALccG3("Enable Gradient 3 Color Control", Float) = 0
-        [Enum(ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG3StopA("Gradient 3 Stop A Color Control", Float) = 0.1992
-        [Enum(ColorChord 1,0.1992,ColorChord 2,0.2070,ColorChord 3,0.2148,ColorChord 4,0.2227)] _ALccG3StopC("Gradient 3 Stop C Color Control", Float) = 0.1992
-        [Enum(Theme Color 0,0.0039,Theme Color 1,0.0117,Theme Color 2,0.0195,Theme Color 3,0.0273)] _ALttG3StopA("Gradient 3 Stop A Color Control", Float) = 0.0039
-        [Enum(Theme Color 0,0.0039,Theme Color 1,0.0117,Theme Color 2,0.0195,Theme Color 3,0.0273)] _ALttG3StopC("Gradient 3 Stop C Color Control", Float) = 0.0039
-        [Enum(Bass,0.0078,Low Mids,0.0234,High Mids,0.0390,Treble,0.0546)] _BandG3("Gradient 3 Audio Band", Float) = 0.0390
+        [Enum(ColorChord 1,1,ColorChord 2,2,ColorChord 3,3,ColorChord 4,4)] _ALccG3StopA("Gradient 3 Stop A Color Control", Float) = 1
+        [Enum(ColorChord 1,1,ColorChord 2,2,ColorChord 3,3,ColorChord 4,4)] _ALccG3StopC("Gradient 3 Stop C Color Control", Float) = 1
+        [Enum(Theme Color 0,1,Theme Color 1,2,Theme Color 2,3,Theme Color 3,4)] _ALttG3StopA("Gradient 3 Stop A Color Control", Float) = 1
+        [Enum(Theme Color 0,1,Theme Color 1,2,Theme Color 2,3,Theme Color 3,4)] _ALttG3StopC("Gradient 3 Stop C Color Control", Float) = 1
+        [Enum(Bass,0,Low Mids,1,High Mids,2,Treble,3)] _BandG3("Gradient 3 Audio Band", Float) = 2
         [MaterialToggle] _BandG3Reverse("Reverse Gradient 3 Audio", Float) = 0
         _BandG3Length ("Gradient 3 Audio Length", Range(0, 1)) = 1.0
 
@@ -364,6 +364,18 @@
 
             uniform sampler2D _AudioTexture;
 
+            float enumBand(float value) {
+                return 0.0078 + 0.0156 * value;
+            }
+
+            float enumALcc(float value) {
+                return 0.1992 + 0.0078 * (value - 1);
+            }
+
+            float enumALtt(float value) {
+                return 0.0039 + 0.0078 * (value - 1);
+            }
+
             fixed3 HSVToRGB(float3 c) {
                 float4 K = float4( 1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0 );
                 float3 p = abs( frac( c.xxx + K.xyz ) * 6.0 - K.www );
@@ -594,17 +606,17 @@
                                     rgb = getDMXColor(_DMXccZ1);
                                 }
                                 if (isALOn) {
-                                    float2 uv = float2(1.0 / 256, _BandZ1);
+                                    float2 uv = float2(1.0 / 256, enumBand(_BandZ1));
                                     val = tex2D(_AudioTexture, uv).x;
                                     if (_ALThemes) {
                                         if (_ALttZ1 != 0 && (!isDMXOn || _DMXccZ1Enable == 0)) {
-                                            rgb = tex2D(_AudioTexture, float2(_ALttZ1, 1.0 / 128 + (1.0 / 64) * 23));
+                                            rgb = tex2D(_AudioTexture, float2(enumALtt(_ALttZ1), 1.0 / 128 + (1.0 / 64) * 23));
                                             rgb = maximize(rgb);
                                         }
                                     }
                                     else {
                                         if (_ALccZ1 != 0 && (!isDMXOn || _DMXccZ1Enable == 0)) {
-                                            rgb = tex2D(_AudioTexture, float2(_ALccZ1, 1.0 / 128 + (1.0 / 64) * 22));
+                                            rgb = tex2D(_AudioTexture, float2(enumALcc(_ALccZ1), 1.0 / 128 + (1.0 / 64) * 22));
                                             rgb = maximize(rgb);
                                         }
                                     }
@@ -631,17 +643,17 @@
                                     rgb = getDMXColor(_DMXccZ2);
                                 }
                                 if (isALOn) {
-                                    float2 uv = float2(1.0 / 256, _BandZ2);
+                                    float2 uv = float2(1.0 / 256, enumBand(_BandZ2));
                                     val = tex2D(_AudioTexture, uv).x;
                                     if (_ALThemes) {
                                         if (_ALttZ2 != 0 && (!isDMXOn || _DMXccZ2Enable == 0)) {
-                                            rgb = tex2D(_AudioTexture, float2(_ALttZ2, 1.0 / 128 + (1.0 / 64) * 23));
+                                            rgb = tex2D(_AudioTexture, float2(enumALtt(_ALttZ2), 1.0 / 128 + (1.0 / 64) * 23));
                                             rgb = maximize(rgb);
                                         }
                                     }
                                     else {
                                         if (_ALccZ2 != 0 && (!isDMXOn || _DMXccZ2Enable == 0)) {
-                                            rgb = tex2D(_AudioTexture, float2(_ALccZ2, 1.0 / 128 + (1.0 / 64) * 22));
+                                            rgb = tex2D(_AudioTexture, float2(enumALcc(_ALccZ2), 1.0 / 128 + (1.0 / 64) * 22));
                                             rgb = maximize(rgb);
                                         }
                                     }
@@ -668,17 +680,17 @@
                                     rgb = getDMXColor(_DMXccZ3);
                                 }
                                 if (isALOn) {
-                                    float2 uv = float2(1.0 / 256, _BandZ3);
+                                    float2 uv = float2(1.0 / 256, enumBand(_BandZ3));
                                     val = tex2D(_AudioTexture, uv).x;
                                     if (_ALThemes) {
                                         if (_ALttZ3 != 0 && (!isDMXOn || _DMXccZ3Enable == 0)) {
-                                            rgb = tex2D(_AudioTexture, float2(_ALttZ3, 1.0 / 128 + (1.0 / 64) * 23));
+                                            rgb = tex2D(_AudioTexture, float2(enumALtt(_ALttZ3), 1.0 / 128 + (1.0 / 64) * 23));
                                             rgb = maximize(rgb);
                                         }
                                     }
                                     else {
                                         if (_ALccZ3 != 0 && (!isDMXOn || _DMXccZ3Enable == 0)) {
-                                            rgb = tex2D(_AudioTexture, float2(_ALccZ3, 1.0 / 128 + (1.0 / 64) * 22));
+                                            rgb = tex2D(_AudioTexture, float2(enumALcc(_ALccZ3), 1.0 / 128 + (1.0 / 64) * 22));
                                             rgb = maximize(rgb);
                                         }                                        
                                     }
@@ -706,17 +718,17 @@
                                     rgb = getDMXColor(_DMXccZ4);
                                 }
                                 if (isALOn) {
-                                    float2 uv = float2(1.0 / 256, _BandZ4);
+                                    float2 uv = float2(1.0 / 256, enumBand(_BandZ4));
                                     val = tex2D(_AudioTexture, uv).x;
                                     if (_ALThemes) {
                                         if (_ALttZ4 != 0 && (!isDMXOn || _DMXccZ4Enable == 0)) {
-                                            rgb = tex2D(_AudioTexture, float2(_ALttZ4, 1.0 / 128 + (1.0 / 64) * 23));
+                                            rgb = tex2D(_AudioTexture, float2(enumALtt(_ALttZ4), 1.0 / 128 + (1.0 / 64) * 23));
                                             rgb = maximize(rgb);
                                         }
                                     }
                                     else {
                                         if (_ALccZ4 != 0 && (!isDMXOn || _DMXccZ4Enable == 0)) {
-                                            rgb = tex2D(_AudioTexture, float2(_ALccZ4, 1.0 / 128 + (1.0 / 64) * 22));
+                                            rgb = tex2D(_AudioTexture, float2(enumALcc(_ALccZ4), 1.0 / 128 + (1.0 / 64) * 22));
                                             rgb = maximize(rgb);
                                         }
                                     }
@@ -773,19 +785,19 @@
                         // AUDIOLINK
                         if (isALOn) {
                             if (_ALccG1 && _ColorOverrideG1 == 0 && (!isDMXOn || _DMXccG1Enable == 0)) {
-                                rgbA = getALStop(rgbA, _ALccG1StopA, _ALttG1StopA);
-                                rgbC = getALStop(rgbC, _ALccG1StopC, _ALttG1StopC);
+                                rgbA = getALStop(rgbA, enumALcc(_ALccG1StopA), enumALtt(_ALttG1StopA));
+                                rgbC = getALStop(rgbC, enumALcc(_ALccG1StopC), enumALtt(_ALttG1StopC));
                             }
 
                             float2 uv;
                             if (_BandG1Length == 0) {
-                                uv = float2(1.0 / 256, _BandG1);
+                                uv = float2(1.0 / 256, enumBand(_BandG1));
                             }
                             else {
                                 if (_BandG1Reverse == 1)
-                                    uv = float2(ratio * _BandG1Length, _BandG1);
+                                    uv = float2(ratio * _BandG1Length, enumBand(_BandG1));
                                 else
-                                    uv = float2((1 - ratio) * _BandG1Length, _BandG1);
+                                    uv = float2((1 - ratio) * _BandG1Length, enumBand(_BandG1));
                             }
                             val = tex2D(_AudioTexture, uv).x;
                         }
@@ -828,19 +840,19 @@
                         // AUDIOLINK
                         if (isALOn) {
                             if (_ALccG2 && _ColorOverrideG2 == 0 && (!isDMXOn || _DMXccG2Enable == 0)) {
-                                rgbA = getALStop(rgbA, _ALccG2StopA, _ALttG2StopA);
-                                rgbC = getALStop(rgbC, _ALccG2StopC, _ALttG2StopC);
+                                rgbA = getALStop(rgbA, enumALcc(_ALccG2StopA), enumALtt(_ALttG2StopA));
+                                rgbC = getALStop(rgbC, enumALcc(_ALccG2StopC), enumALtt(_ALttG2StopC));
                             }
 
                             float2 uv;
                             if (_BandG2Length == 0) {
-                                uv = float2(1.0 / 256, _BandG2);
+                                uv = float2(1.0 / 256, enumBand(_BandG2));
                             }
                             else {
                                 if (_BandG2Reverse == 1)
-                                    uv = float2(ratio * _BandG2Length, _BandG2);
+                                    uv = float2(ratio * _BandG2Length, enumBand(_BandG2));
                                 else
-                                    uv = float2((1 - ratio) * _BandG2Length, _BandG2);
+                                    uv = float2((1 - ratio) * _BandG2Length, enumBand(_BandG2));
                             }
                             val = tex2D(_AudioTexture, uv).x;
                         }
@@ -883,19 +895,19 @@
                         // AUDIOLINK
                         if (isALOn) {
                             if (_ALccG3 && _ColorOverrideG3 == 0 && (!isDMXOn || _DMXccG3Enable == 0)) {
-                                rgbA = getALStop(rgbA, _ALccG3StopA, _ALttG3StopA);
-                                rgbC = getALStop(rgbC, _ALccG3StopC, _ALttG3StopC);
+                                rgbA = getALStop(rgbA, enumALcc(_ALccG3StopA), enumALtt(_ALttG3StopA));
+                                rgbC = getALStop(rgbC, enumALcc(_ALccG3StopC), enumALtt(_ALttG3StopC));
                             }
 
                             float2 uv;
                             if (_BandG3Length == 0) {
-                                uv = float2(1.0 / 256, _BandG3);
+                                uv = float2(1.0 / 256, enumBand(_BandG3));
                             }
                             else {
                                 if (_BandG3Reverse == 1)
-                                    uv = float2(ratio * _BandG3Length, _BandG3);
+                                    uv = float2(ratio * _BandG3Length, enumBand(_BandG3));
                                 else
-                                    uv = float2((1 - ratio) * _BandG3Length, _BandG3);
+                                    uv = float2((1 - ratio) * _BandG3Length, enumBand(_BandG3));
                             }
                             val = tex2D(_AudioTexture, uv).x;
                         }
@@ -919,9 +931,9 @@
                                 return fixed4(1, 1, 0, 1);                          
                             }
                             else {
-                                float2 uvLows = float2(1.0 / 256, _ReactiveBandLows);
+                                float2 uvLows = float2(1.0 / 256, enumBand(_ReactiveBandLows));
                                 fixed valLows = tex2D(_AudioTexture, uvLows).x;
-                                float2 uvHighs = float2(1.0 / 256, _ReactiveBandHighs);
+                                float2 uvHighs = float2(1.0 / 256, enumBand(_ReactiveBandHighs));
                                 fixed valHighs = tex2D(_AudioTexture, uvHighs).x;
                                 return fixed4(valLows, valHighs, 0, 1);  
                             }
